@@ -4,6 +4,7 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
+        <h1 class="login-box-msg">Iniciar sesión</h1>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text">

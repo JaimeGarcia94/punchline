@@ -1,4 +1,6 @@
-.login-page {
+
+/*Register styles*/
+.register-page {
     background-color: #F8F9FA !important;
     position: absolute;
     width: 100%;
@@ -8,30 +10,25 @@
     justify-content: center;
 }
 
-.login-box{
-    width: 460px;
+.register-box{
+    width: 500px;
     margin: 7% auto;
 }
 
-.login-box-body{
+.register-box-body{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     text-align: center;
     background: #FFF;
-    padding: 80px 50px 80px 50px;
+    padding: 20px 20px 10px 20px;
     border: 0;
     color: #666;
 }
 
-
-.login-box-msg {
+.register-box-msg {
     margin-bottom: 1rem !important;
     margin-top: 1rem !important;
     font-size: 2.5rem;
     color: #212529;
-}
-
-#span-password {
-    font-size: 18px;
 }
 
 .form-group {
@@ -51,11 +48,3 @@
     color: #fff;
     margin-bottom: 14px;
 }
-
-.icheck {
-    margin: 0 144px 21px 0;
-    padding-left: 1.25rem;
-}
-
-
-
