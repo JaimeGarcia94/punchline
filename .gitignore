@@ -15,4 +15,5 @@ npm-debug.log
 .idea/php.xml
 .idea/vcs.xml
 .idea/punchline.iml
+.idea/jsLibraryMappings.xml
 

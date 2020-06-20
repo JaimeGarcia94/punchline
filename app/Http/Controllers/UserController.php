@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
@@ -26,14 +25,14 @@ class UserController extends Controller
         $validate = $this->validate($request, [
             'name' => ['required', 'string', 'max:100'],
             'surname' => ['required', 'string', 'max:200'],
-            'phone' => ['required', 'int', 'min:9'],
-            'age' => ['required', 'int', 'size:2'],
+            'phone' => ['required','regex:/^[0-9]{9,12}$/ '],
+            'age' => ['required','numeric','between:1,99'],
             'city' => ['required', 'string', 'max:50'],
             'country' => ['required', 'string', 'max:50'],
             'nick' => ['required', 'string', 'max:255', 'unique:users,nick,'.$id],
             'image_path' => ['required', 'image'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,'.$id],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+//            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,'.$id],
+//            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
 
@@ -45,10 +44,9 @@ class UserController extends Controller
         $city = $request->input('city');
         $country = $request->input('country');
         $nick = $request->input('nick');
-        $image_path = $request->input('image_path');
-        $email = $request->input('email');
-        $password = $request->input('password');
-//        $confirmPassword = $request->input('password_confirmation');
+        $image_path = $request->file('image_path');
+//        $email = $request->input('email');
+//        $password = $request->input('password');
 
 
         // asignar nuevos valores al objeto del usuario
@@ -59,12 +57,10 @@ class UserController extends Controller
         $user->city = $city;
         $user->country = $country;
         $user->nick = $nick;
-        $user->email = $email;
-        $user->password = Hash::make($password);
-//        $user->confirmPassword = $confirmPassword;
+//        $user->email = $email;
+//        $user->password = Hash::make($password);
 
         //subir la imagen
-        $image_path = $request->file('image_path');
         if ($image_path){
 
             //Poner nombre único
@@ -84,4 +80,13 @@ class UserController extends Controller
         return redirect()->route('perfil')->with(['message'=>'Usuario actualizado correctamente']);
 
     }
+
+//    public function delete(){
+//        // usuario identificado
+//        $user = \Auth::user()->id;
+//
+//        $user->delete();
+//
+//        return redirect()->route('logout')->with(['message'=>'Usuario eliminado correctamente']);
+//    }
 }
