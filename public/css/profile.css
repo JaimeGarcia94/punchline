@@ -1,0 +1,42 @@
+.title{
+    text-align: center;
+}
+
+.data-user{
+    margin-bottom: 20px;
+    padding: 50px 50px 50px 50px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.form{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    text-align: center;
+    background: #FFF;
+    padding: 50px 50px 50px 50px;
+    border: 0;
+    color: #666;
+}
+
+.navbar .container-avatar{
+    width: 35px;
+    height: 35px;
+    border-radius: 900px;
+    overflow: hidden;
+}
+
+.navbar .container-avatar img{
+    height: 100%;
+
+}
+
+.data-user .container-avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 900px;
+    overflow: hidden;
+}
+
+.data-user .container-avatar img{
+    width: 100%;
+    height: 100%;
+}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
@@ -25,14 +26,12 @@ class UserController extends Controller
         $validate = $this->validate($request, [
             'name' => ['required', 'string', 'max:100'],
             'surname' => ['required', 'string', 'max:200'],
-            'phone' => ['required','regex:/^[0-9]{9,12}$/ '],
+            'phone' => ['required','regex:/^[0-9]{9}$/'],
             'age' => ['required','numeric','between:1,99'],
             'city' => ['required', 'string', 'max:50'],
             'country' => ['required', 'string', 'max:50'],
             'nick' => ['required', 'string', 'max:255', 'unique:users,nick,'.$id],
             'image_path' => ['required', 'image'],
-//            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,'.$id],
-//            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
 
@@ -45,8 +44,6 @@ class UserController extends Controller
         $country = $request->input('country');
         $nick = $request->input('nick');
         $image_path = $request->file('image_path');
-//        $email = $request->input('email');
-//        $password = $request->input('password');
 
 
         // asignar nuevos valores al objeto del usuario
@@ -57,8 +54,6 @@ class UserController extends Controller
         $user->city = $city;
         $user->country = $country;
         $user->nick = $nick;
-//        $user->email = $email;
-//        $user->password = Hash::make($password);
 
         //subir la imagen
         if ($image_path){
@@ -79,6 +74,13 @@ class UserController extends Controller
 
         return redirect()->route('perfil')->with(['message'=>'Usuario actualizado correctamente']);
 
+    }
+
+    public function getImage($filename)
+    {
+        $file = Storage::disk('users')->get($filename);
+
+        return new Response($file,200);
     }
 
 //    public function delete(){
