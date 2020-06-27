@@ -100,5 +100,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="intlTelInput" level="application" />
+    <orderEntry type="library" name="intlTelInput-jquery" level="application" />
   </component>
 </module>
