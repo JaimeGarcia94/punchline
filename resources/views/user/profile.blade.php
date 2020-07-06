@@ -14,7 +14,6 @@
                         @include('includes.avatar')
                     </div>
 
-
                     <div class="user-info">
                         @include('includes.nick')
                         @include('includes.age')

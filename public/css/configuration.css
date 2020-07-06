@@ -1,0 +1,32 @@
+.title{
+    text-align: center;
+}
+
+.form{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    text-align: center;
+    background: #FFF;
+    padding: 50px 50px 50px 50px;
+    border: 0;
+    color: #666;
+}
+
+.btn-save{
+    width: 100%;
+    max-width: 400px;
+}
+
+.navbar .container-avatar{
+    width: 35px;
+    height: 35px;
+    border-radius: 900px;
+    overflow: hidden;
+}
+
+.navbar .container-avatar img{
+    height: 100%;
+
+}
+
+
+
