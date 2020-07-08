@@ -10,61 +10,83 @@
                     </div>
                 @endif
                 <div class="form">
-                    <form method="POST" action="{{ route('config.update') }}" enctype="multipart/form-data">
-                    @csrf
+                    <h1 class="title">Configuración</h1>
 
-                        <h1 class="title">Configuración</h1>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-mail-tab" data-toggle="tab" href="#nav-mail" role="tab" aria-controls="nav-mail" aria-selected="true">Email</a>
+                            <a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false">Contraseña</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-mail" role="tabpanel" aria-labelledby="nav-mail-tab">
+                            <form method="POST" action="{{ route('config.updateEmail') }}" enctype="multipart/form-data">
+                                @csrf
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                    </div>
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ Auth::user()->email }}" required autocomplete="email" placeholder="Email">
 
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-envelope"></i>
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
                                 </span>
-                            </div>
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ Auth::user()->email }}" required autocomplete="email" placeholder="Email">
+                                    @enderror
 
-                            @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
+                                </div>
 
+                                <div class="col-xs-12 mb-3">
+
+                                    <button type="submit" class="btn btn-primary btn-save">
+                                        {{ __('Guardar cambios') }}
+                                    </button>
+
+                                </div>
+                            </form>
                         </div>
 
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-lock"></i>
+                        <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
+
+                            <form method="POST" action="{{ route('config.updatePassword') }}" enctype="multipart/form-data">
+                                @csrf
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
+                                    </div>
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Nueva contraseña">
+
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
                                 </span>
-                            </div>
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ Auth::user()->password }}" required autocomplete="new-password" placeholder="Contraseña">
+                                    @enderror
 
-                            @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
+                                </div>
 
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
+                                    </div>
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirma la nueva contraseña">
+
+                                </div>
+
+                                <div class="col-xs-12 mb-3">
+
+                                    <button type="submit" class="btn btn-primary btn-save">
+                                        {{ __('Guardar cambios') }}
+                                    </button>
+
+                                </div>
+                            </form>
                         </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-lock"></i>
-                                </span>
-                            </div>
-                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" value="{{ Auth::user()->password }}" required autocomplete="new-password" placeholder="Confirma Contraseña">
-
-                        </div>
-
-                        <div class="col-xs-12 mb-3">
-
-                            <button type="submit" class="btn btn-primary btn-save">
-                                {{ __('Guardar cambios') }}
-                            </button>
-
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

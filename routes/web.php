@@ -23,5 +23,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/perfil', 'UserController@profile')->name('perfil');
 Route::post('/user/update', 'UserController@update')->name('user.update');
 Route::get('/configuration', 'ConfigController@configuration')->name('configuration');
-Route::post('/config/update', 'ConfigController@update')->name('config.update');
+Route::post('/config/update/email', 'ConfigController@updateEmail')->name('config.updateEmail');
+Route::post('/config/update/password', 'ConfigController@updatePassword')->name('config.updatePassword');
 Route::get('/user/avatar/{filename}', 'UserController@getImage')->name('user.avatar');

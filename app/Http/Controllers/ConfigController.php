@@ -12,7 +12,7 @@ class ConfigController extends Controller
         return view('user.configuration');
     }
 
-    public function update(Request $request)
+    public function updateEmail(Request $request)
     {
 
         // usuario identificado
@@ -23,17 +23,39 @@ class ConfigController extends Controller
         // validar formulario
         $validate = $this->validate($request, [
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,'.$id],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
 
         // recoger datos del formulario
         $email = $request->input('email');
+
+        // asignar nuevos valores al objeto del usuario
+        $user->email = $email;
+
+
+        // ejecutar consulta y cambios en la BD
+        $user->update();
+
+        return redirect()->route('configuration')->with(['message'=>'Email actualizado correctamente']);
+
+    }
+
+    public function updatePassword(Request $request)
+    {
+        // usuario identificado
+        $user = \Auth::user();
+
+        // validar formulario
+        $validate = $this->validate($request, [
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+
+
+        // recoger datos del formulario
         $password = $request->input('password');
 
 
         // asignar nuevos valores al objeto del usuario
-        $user->email = $email;
         $user->password = Hash::make($password);
 
 
@@ -41,7 +63,7 @@ class ConfigController extends Controller
         // ejecutar consulta y cambios en la BD
         $user->update();
 
-        return redirect()->route('configuration')->with(['message'=>'Usuario actualizado correctamente']);
+        return redirect()->route('configuration')->with(['message'=>'Contraseña actualizado correctamente']);
 
     }
 }
