@@ -3,10 +3,15 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6">
-                @if(session('message'))
+            <div class="col-md-7">
+                @if(session('messageDanger'))
+                    <div class="alert alert-danger">
+                        {{ session('messageDanger') }}
+                    </div>
+                @endif
+                @if(session('messageSuccess'))
                     <div class="alert alert-success">
-                        {{ session('message') }}
+                        {{ session('messageSuccess') }}
                     </div>
                 @endif
                 <div class="form">

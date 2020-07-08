@@ -18,6 +18,7 @@ class ConfigController extends Controller
         // usuario identificado
         $user = \Auth::user();
         $id = $user->id;
+        $validateEMail = $user->email;
 
 
         // validar formulario
@@ -32,11 +33,19 @@ class ConfigController extends Controller
         // asignar nuevos valores al objeto del usuario
         $user->email = $email;
 
+        // comprueba si el email existe o no
+        if($email == $validateEMail){
 
-        // ejecutar consulta y cambios en la BD
-        $user->update();
+            return redirect()->route('configuration')->with(['messageDanger'=>'El email ya existe']);
+        }else{
+            // ejecutar consulta y cambios en la BD
+            $user->update();
 
-        return redirect()->route('configuration')->with(['message'=>'Email actualizado correctamente']);
+            return redirect()->route('configuration')->with(['messageSuccess'=>'Email actualizado correctamente']);
+        }
+
+
+
 
     }
 
@@ -63,7 +72,7 @@ class ConfigController extends Controller
         // ejecutar consulta y cambios en la BD
         $user->update();
 
-        return redirect()->route('configuration')->with(['message'=>'Contraseña actualizado correctamente']);
+        return redirect()->route('configuration')->with(['messageSuccess'=>'Contraseña actualizada correctamente']);
 
     }
 }
