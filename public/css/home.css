@@ -1,0 +1,39 @@
+.title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.box-game{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    text-align: center;
+    background: #FFF;
+    padding: 50px 50px 50px 50px;
+    border: 0;
+    color: #666;
+}
+
+.row{
+    margin-bottom: 20px;
+}
+
+.link-panel-game{
+    /*color: #000;*/
+}
+
+.link-panel-game:hover{
+    /*color: #000;*/
+}
+
+.description-card-game{
+    background-color: #000000;
+    opacity: 0.3;
+}
+
+@media (max-width: 992px) {
+    .row{
+        margin-bottom: 0;
+    }
+    .container-card-panel{
+        margin-bottom: 20px;
+    }
+}
