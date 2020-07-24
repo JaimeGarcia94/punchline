@@ -9,16 +9,17 @@ class EasyModeController extends Controller
 {
     public function index()
     {
-        $this->getWords();
-        return view('easymode.content');
+        return view('easymode.content',[
+            "words" => $this->getWords()
+        ]);
 
     }
 
     public function getWords()
     {
-        $logs = Word::all();
+        $words = Word::all('word');
 
-        return $logs;
+        return $words;
     }
 
 }

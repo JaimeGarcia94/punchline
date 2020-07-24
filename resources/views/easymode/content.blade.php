@@ -2,9 +2,15 @@
 
 @section('content')
 <h1>WORDS</h1>
-{{--    @foreach($logs as $log)--}}
-{{--        <p>{{ $log }}</p>--}}
-{{--    @endforeach--}}
+    @foreach($words as $word)
+        <p>{{ $word->word }}</p>
+    @endforeach
+
+@json($words)
+{{--<script type="text/javascript">--}}
+
+{{--    const word = @json($words);--}}
+
+
+{{--</script>--}}
 @endsection
-
-
