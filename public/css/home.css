@@ -6,7 +6,7 @@
 .box-game{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     text-align: center;
-    background: #FFF;
+    /*background-color: #FFF;*/
     padding: 50px 50px 50px 50px;
     border: 0;
     color: #666;
@@ -16,18 +16,28 @@
     margin-bottom: 20px;
 }
 
-.link-panel-game{
-    /*color: #000;*/
+.container-card-panel {
+    display:inline-block;
+    position:relative;
 }
 
-.link-panel-game:hover{
-    /*color: #000;*/
+.text-hover {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    padding:10px;
+    margin:0;
+    color: #000;
 }
 
-.description-card-game{
-    padding: 10px 0px 1px 0px;
-    background-color: #000000;
-    opacity: 0.3;
+.img-hidden:hover {
+    opacity: 0.07;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    transition: opacity 500ms;
 }
 
 @media (max-width: 992px) {
@@ -38,3 +48,6 @@
         margin-bottom: 20px;
     }
 }
+
+
+
