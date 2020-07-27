@@ -21,12 +21,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<<<<<<< HEAD
+
     <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
     <link href="{{ asset('css/configuration.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
-=======
->>>>>>> b275ebca32c5ade6d82977867d0b9bd6ebee0b67
+
 
 </head>
 <body>
@@ -68,18 +67,13 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-<<<<<<< HEAD
                                     <a class="dropdown-item" href="{{ route('perfil') }}">
                                         {{ __('Ver perfil') }}
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('configuration') }}">
                                         {{ __('Configuración') }}
-=======
-                                    <a class="dropdown-item" href="#">
-                                        {{ __('Mi perfil') }}
->>>>>>> b275ebca32c5ade6d82977867d0b9bd6ebee0b67
-                                    </a>
+
                                     
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
