@@ -52,7 +52,16 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:100'],
             'surname' => ['required', 'string', 'max:200'],
+<<<<<<< HEAD
             'nick' => ['required', 'string', 'max:255', 'unique:users'],
+=======
+//            'phone' => ['required', 'int', 'min:9'],
+//            'age' => ['required', 'int', 'size:2'],
+//            'city' => ['required', 'string', 'max:50'],
+//            'country' => ['required', 'string', 'max:50'],
+            'nick' => ['required', 'string', 'max:255', 'unique:users'],
+//            'image_path' => ['required', 'image'],
+>>>>>>> b275ebca32c5ade6d82977867d0b9bd6ebee0b67
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -71,7 +80,16 @@ class RegisterController extends Controller
             'score' => 0,
             'name' => $data['name'],
             'surname' => $data['surname'],
+<<<<<<< HEAD
             'nick' => $data['nick'],
+=======
+//            'phone' => $data['phone'],
+//            'age' => $data['age'],
+//            'city' => $data['city'],
+//            'country' => $data['country'],
+            'nick' => $data['nick'],
+//            'image_path' => $data['image_path'],
+>>>>>>> b275ebca32c5ade6d82977867d0b9bd6ebee0b67
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

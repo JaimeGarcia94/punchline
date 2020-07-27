@@ -62,6 +62,7 @@ return [
             'visibility' => 'public',
         ],
 
+<<<<<<< HEAD
         'images' => [
             'driver' => 'local',
             'root' => storage_path('app/images'),
@@ -69,6 +70,8 @@ return [
             'visibility' => 'public',
         ],
 
+=======
+>>>>>>> b275ebca32c5ade6d82977867d0b9bd6ebee0b67
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
