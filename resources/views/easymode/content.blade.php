@@ -9,9 +9,8 @@
     var listwords = @json($words);
 
     setInterval(function () {
-        view_word = getRandomWord();
-        document.getElementById("word").innerHTML = view_word;
-    }, 5000);
+        document.getElementById("word").innerHTML = getRandomWord();
+    }, 10000);
 
     function getRandomWord(){
         const randomWords = Math.floor(Math.random()*(listwords.length ));
