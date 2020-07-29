@@ -14,8 +14,8 @@
     }, 5000);
 
     function getRandomWord(){
-        const randomNum = Math.floor(Math.random()*(listwords.length ));
-        return listwords[randomNum];
+        const randomWords = Math.floor(Math.random()*(listwords.length ));
+        return listwords[randomWords];
     }
 
 </script>
