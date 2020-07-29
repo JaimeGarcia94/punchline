@@ -2,15 +2,15 @@
 
 @section('content')
 <h1>WORDS</h1>
-    <p class="word"></p>
+    <h1 id="word" class="text-center"></h1>
 @endsection
 
 <script>
     var listwords = @json($words);
-    // console.log(listwords.word);
 
     setInterval(function () {
-        // console.log(getRandomWord());
+        view_word = getRandomWord();
+        document.getElementById("word").innerHTML = view_word;
     }, 5000);
 
     function getRandomWord(){

@@ -19,12 +19,11 @@ class EasyModeController extends Controller
     {
         $words = Word::all('word');
 
-//
-//        foreach (Word::all() as $word){
-//            return $word->word;
-//        }
+        foreach ($words as $word){
+            $array_word[] = $word->word;
+        }
 
-        return $words;
+        return $array_word;
 
     }
 
