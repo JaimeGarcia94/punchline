@@ -9,7 +9,7 @@
                     <div class="row ">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
                             <div class="container-card-panel">
-                                <a href="{{ route('easyMode') }}">
+                                <a href="{{ route('beats') }}">
                                     <div class="text-hover">
                                         <h5 class="text-justify">Easy Mode</h5>
                                         <p>Palabras cada 10 segundos</p>

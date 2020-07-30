@@ -34,5 +34,8 @@ Route::get('/configuration', 'ConfigController@configuration')->name('configurat
 Route::post('/config/update/email', 'ConfigController@updateEmail')->name('config.updateEmail');
 Route::post('/config/update/password', 'ConfigController@updatePassword')->name('config.updatePassword');
 
+//route page music beats
+Route::get('/beats', 'MusicController@index')->name('beats');
+
 //route game easy mode
 Route::get('/easyMode', 'EasyModeController@index')->name('easyMode');
