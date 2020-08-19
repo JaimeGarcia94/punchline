@@ -24,7 +24,7 @@ class MusicController extends Controller
 
         // validar formulario
         $validate = $this->validate($request, [
-            'music_path' => ['required', 'image'],
+            'music_path' => ['required'],
         ]);
 
 
