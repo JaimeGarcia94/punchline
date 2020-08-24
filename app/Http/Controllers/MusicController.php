@@ -29,7 +29,7 @@ class MusicController extends Controller
 
 
         // recoger datos del formulario
-        $music_path = $request->file('image_path');
+        $music_path = $request->file('music_path');
 
 
         //subir la imagen
@@ -53,7 +53,7 @@ class MusicController extends Controller
 
     }
 
-    public function getImage($filename)
+    public function getMusic($filename)
     {
         $file = Storage::disk('beats')->get($filename);
 

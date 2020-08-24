@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="form">
-        <form method="POST" action="{{ route('beats') }}" enctype="multipart/form-data">
+        <form method="GET" action="{{ route('beats') }}" enctype="multipart/form-data">
             @csrf
 
             <h1 class="title">Beats</h1>

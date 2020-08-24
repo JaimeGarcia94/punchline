@@ -62,16 +62,16 @@ return [
             'visibility' => 'public',
         ],
 
-        'beats' => [
+        'images' => [
             'driver' => 'local',
-            'root' => storage_path('app/beats'),
+            'root' => storage_path('app/images'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
 
-        'images' => [
+        'beats' => [
             'driver' => 'local',
-            'root' => storage_path('app/images'),
+            'root' => storage_path('app/beats'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
