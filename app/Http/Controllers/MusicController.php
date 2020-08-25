@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use App\Music;
 
 class MusicController extends Controller
 {
@@ -18,8 +19,14 @@ class MusicController extends Controller
     public function insertBeat(Request $request)
     {
 
+        $music_path = $request->file('music_path');
+        var_dump($music_path);
+        die();
+
         // usuario identificado
         $user = \Auth::user();
+
+//        $music = Music::all();
 
 
         // validar formulario
@@ -29,7 +36,7 @@ class MusicController extends Controller
 
 
         // recoger datos del formulario
-        $music_path = $request->file('music_path');
+//        $music_path = $request->file('music_path');
 
 
         //subir la imagen
@@ -53,11 +60,11 @@ class MusicController extends Controller
 
     }
 
-    public function getMusic($filename)
-    {
-        $file = Storage::disk('beats')->get($filename);
-
-        return new Response($file,200);
-    }
+//    public function getMusic($filename)
+//    {
+//        $file = Storage::disk('beats')->get($filename);
+//
+//        return new Response($file,200);
+//    }
 
 }

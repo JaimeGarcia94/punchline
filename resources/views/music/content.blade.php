@@ -1,8 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+    @if(session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
     <div class="form">
-        <form method="GET" action="{{ route('beats') }}" enctype="multipart/form-data">
+        <form method="GET" action="{{ route('beats.insert') }}" enctype="multipart/form-data">
             @csrf
 
             <h1 class="title">Beats</h1>
