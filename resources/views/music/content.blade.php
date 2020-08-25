@@ -18,7 +18,7 @@
                                     <i class="fa fa-photo"></i>
                                 </span>
                 </div>
-                <input id="music_path" type="file" class="form-control @error('music_path') is-invalid @enderror" name="music_path" required autocomplete="music_path" autofocus placeholder="avatar">
+                <input id="music_path" type="file" class="form-control @error('music_path') is-invalid @enderror" name="music_path" required autocomplete="music_path">
 
                 @error('music_path')
                 <span class="invalid-feedback" role="alert">
