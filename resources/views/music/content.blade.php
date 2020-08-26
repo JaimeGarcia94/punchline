@@ -7,7 +7,7 @@
         </div>
     @endif
     <div class="form">
-        <form method="GET" action="{{ route('beats.insert') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('beats.insert') }}" enctype="multipart/form-data">
             @csrf
 
             <h1 class="title">Beats</h1>

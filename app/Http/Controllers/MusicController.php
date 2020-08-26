@@ -22,7 +22,8 @@ class MusicController extends Controller
         // usuario identificado
 //        $user = \Auth::user();
 
-//        $music = \Music::all();
+
+//        $fileModel = new File;
 //
 //
 //        // validar formulario
@@ -46,12 +47,12 @@ class MusicController extends Controller
 //            Storage::disk('beats')->put($music_path_name, File::get($music_path));
 //
 //            //seteo el nombre de la imagen en el objeto
-//            $music->music_path = $music_path_name;
+//            $fileModel->music_path = $music_path_name;
 //        }
 //
 //
 //        // ejecutar consulta y cambios en la BD
-//        $music->update();
+//        $fileModel->save();
 //
 //        return redirect()->route('beats')->with(['message'=>'beat añadido correctamente']);
 
