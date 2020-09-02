@@ -38,7 +38,7 @@ Route::post('/config/update/password', 'ConfigController@updatePassword')->name(
 Route::get('/beats', 'MusicController@index')->name('beats');
 
 Route::post('/beats/insert', 'MusicController@insertBeat')->name('beats.insert');
-Route::get('/beats/{filename}', 'MusicController@getMusic')->name('beat.show');
+Route::get('/beats/get', 'MusicController@getMusic')->name('beat.show');
 
 //route game easy mode
 Route::get('/easyMode', 'EasyModeController@index')->name('easyMode');
