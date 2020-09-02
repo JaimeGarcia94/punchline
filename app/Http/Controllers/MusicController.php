@@ -6,24 +6,21 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
-use \App\Music;
 
 class MusicController extends Controller
 {
     public function index()
     {
-        return view('music.content');
+        return view('music.content',[
+//            'beats' => $this->getMusic($filename)
+        ]);
 
     }
 
     public function insertBeat(Request $request)
     {
 
-        // usuario identificado
-//        $user = \Auth::user();
-
-
-        $fileModel = new \App\Music;
+        $fileBeat = new \App\Music;
 
 
         // validar formulario
@@ -37,7 +34,7 @@ class MusicController extends Controller
 //        dd($music_path);
 
 
-//        //subir la imagen
+//        //subir el beat
         if ($music_path){
 
             //Poner nombre único
@@ -47,12 +44,12 @@ class MusicController extends Controller
             Storage::disk('beats')->put($music_path_name, File::get($music_path));
 
             //seteo el nombre de la imagen en el objeto
-            $fileModel->music_path = $music_path_name;
+            $fileBeat->music_path = $music_path_name;
         }
 
 
         // ejecutar consulta y cambios en la BD
-        $fileModel->save();
+        $fileBeat->save();
 
         return redirect()->route('beats')->with(['message'=>'beat añadido correctamente']);
 
@@ -61,6 +58,7 @@ class MusicController extends Controller
     public function getMusic($filename)
     {
         $file = Storage::disk('beats')->get($filename);
+//        dd($file);
 
         return new Response($file,200);
     }
