@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Music;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
@@ -13,7 +14,15 @@ class MusicController extends Controller
     public function index()
     {
 
-        return view('music.content');
+        $getBeats = Music::all('music_path');
+
+        foreach ($getBeats as $getBeat){
+            $array_beat[] = $getBeat->music_path;
+        }
+
+        return view('music.content',[
+            'beats' => $this->getMusic($array_beat)
+        ]);
 
     }
 
@@ -58,7 +67,6 @@ class MusicController extends Controller
     public function getMusic($filename)
     {
         $file = Storage::disk('beats')->get($filename);
-//        dd($file);
 
         return new Response($file,200);
     }
