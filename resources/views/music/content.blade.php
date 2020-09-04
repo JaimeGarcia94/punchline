@@ -38,13 +38,19 @@
 
     <div>
         <audio controls="controls">
-            <source src="{{ route('beat.show', ['filename' => 'beats']) }}" type="audio/mpeg" />
+{{--            <source src="{{ route('beat.show', ['filename' => 'beats']) }}" type="audio/mpeg" />--}}
 {{--            <source src="/beats/beat.mp3" type="audio/mpeg" />--}}
         </audio>
     </div>
 @endsection
 
 <script>
+
+    {{--var listBeats = @json($beats);--}}
+
+    {{--@foreach ($beats as $beat)--}}
+    {{--    {{$beat->music_path}}--}}
+    {{--@endforeach--}}
 
 
 </script>

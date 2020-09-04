@@ -17,11 +17,12 @@ class MusicController extends Controller
         $getBeats = Music::all('music_path');
 
         foreach ($getBeats as $getBeat){
-            $array_beat[] = $getBeat->music_path;
+            $array_beat[] = $this->getMusic($getBeat->music_path);
         }
+//        dd($array_beat);
 
         return view('music.content',[
-            'beats' => $this->getMusic($array_beat)
+            'beats' => $array_beat
         ]);
 
     }
