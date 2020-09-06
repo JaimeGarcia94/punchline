@@ -14,15 +14,15 @@ class MusicController extends Controller
     public function index()
     {
 
-        $getBeats = Music::all('music_path');
-
-        foreach ($getBeats as $getBeat){
-            $array_beat[] = $getBeat->music_path;
-        }
+//        $getBeats = Music::all('music_path');
+//
+//        foreach ($getBeats as $getBeat){
+//            $array_beat[] = $getBeat->music_path;
+//        }
 //        dd($array_beat);
 
         return view('music.content',[
-            'beats' => $this->getMusic($array_beat)
+//            'beats' => $this->getMusic($array_beat)
         ]);
 
     }

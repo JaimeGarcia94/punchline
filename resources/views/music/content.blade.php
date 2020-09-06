@@ -38,7 +38,7 @@
 
     <div>
         <audio controls="controls">
-            <source src="{{ route('beat.show', ['filename' => $beats['music_path']]) }}" type="audio/mpeg" />
+            <source src="{{ route('beat.show', ['filename' => 'beat.mp3']) }}" type="audio/mpeg" />
 {{--            <source src="/beats/beat.mp3" type="audio/mpeg" />--}}
         </audio>
     </div>
