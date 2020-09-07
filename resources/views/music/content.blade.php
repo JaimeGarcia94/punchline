@@ -38,9 +38,17 @@
 
     <div>
         <audio controls="controls">
-            <source src="{{ route('beat.show', ['filename' => 'beat.mp3']) }}" type="audio/mpeg" />
+            <source src="{{ route('beat.show', ['filename' => 'dks-by-erikkles.mp3']) }}" type="audio/mpeg" />
 {{--            <source src="/beats/beat.mp3" type="audio/mpeg" />--}}
         </audio>
+    </div>
+
+    <div>
+        <select name="" id="">
+            @foreach($beats as $beat)
+            <option value="">{{$beat}}</option>
+            @endforeach
+        </select>
     </div>
 @endsection
 

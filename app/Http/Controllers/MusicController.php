@@ -14,15 +14,8 @@ class MusicController extends Controller
     public function index()
     {
 
-//        $getBeats = Music::all('music_path');
-//
-//        foreach ($getBeats as $getBeat){
-//            $array_beat[] = $getBeat->music_path;
-//        }
-//        dd($array_beat);
-
         return view('music.content',[
-//            'beats' => $this->getMusic($array_beat)
+            'beats' => $this->getAllMusic()
         ]);
 
     }
@@ -48,7 +41,7 @@ class MusicController extends Controller
         if ($music_path){
 
             //Poner nombre único
-            $music_path_name = time().$music_path->getClientOriginalName();
+            $music_path_name = $music_path->getClientOriginalName();
 
             //Guardar en la carpeta storage users
             Storage::disk('beats')->put($music_path_name, File::get($music_path));
@@ -70,6 +63,17 @@ class MusicController extends Controller
         $file = Storage::disk('beats')->get($filename);
 
         return new Response($file,200);
+    }
+
+    public function getAllMusic()
+    {
+        $getAllBeats = Music::all('music_path');
+
+        foreach ($getAllBeats as $getBeat){
+            $array_beats[] = $getBeat->music_path;
+        }
+
+        return $array_beats;
     }
 
 }
