@@ -44,7 +44,7 @@
     </div>
 
     <div>
-        <select name="" id="">
+        <select name="" id="select">
             @foreach($beats as $beat)
             <option value="">{{$beat}}</option>
             @endforeach
