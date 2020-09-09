@@ -39,7 +39,7 @@
     <div>
         <audio id="myAudio">
 
-            <source src="{{ route('beat.show', ['filename' => 'dks-by-erikkles.mp3']) }}" type="audio/mpeg" />
+            <source src="{{ route('beat.show', ['filename' => 'plata.mp3']) }}" type="audio/mpeg" />
 
         </audio>
     </div>
@@ -47,12 +47,12 @@
     <div>
         <select name="" id="select">
             @foreach($beats as $beat)
-            <option value="">{{$beat}}</option>
+            <option value="{{$beat}}">{{$beat}}</option>
             @endforeach
         </select>
     </div>
 
-    <button onclick="playAudio()" id="a" type="button">Play Audio</button>
+    <button onclick="playAudio()" type="button">Play Audio</button>
     <button onclick="pauseAudio()" type="button">Pause Audio</button>
 
     <button onclick="myFunction()">Try it</button>
@@ -64,13 +64,15 @@
 
 
     function myFunction() {
-        alert("Hello! I am an alert box!");
+        var selectBeat = document.getElementById("select").value;
+        alert(selectBeat);
     }
 
     // var x = document.getElementById("myAudio");
 
     function playAudio() {
-        document.getElementById("myAudio").play();
+        var x = document.getElementById("myAudio");
+        x.play();
     }
 
     function pauseAudio() {
