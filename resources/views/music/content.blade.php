@@ -38,7 +38,9 @@
 
     <div>
         <audio id="myAudio">
+
             <source src="{{ route('beat.show', ['filename' => 'dks-by-erikkles.mp3']) }}" type="audio/mpeg" />
+
         </audio>
     </div>
 
