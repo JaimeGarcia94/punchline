@@ -37,9 +37,8 @@
     </div>
 
     <div>
-        <audio controls="controls">
+        <audio id="myAudio">
             <source src="{{ route('beat.show', ['filename' => 'dks-by-erikkles.mp3']) }}" type="audio/mpeg" />
-{{--            <source src="/beats/beat.mp3" type="audio/mpeg" />--}}
         </audio>
     </div>
 
@@ -50,15 +49,31 @@
             @endforeach
         </select>
     </div>
+
+    <button onclick="playAudio()" id="a" type="button">Play Audio</button>
+    <button onclick="pauseAudio()" type="button">Pause Audio</button>
+
+    <button onclick="myFunction()">Try it</button>
+
+
 @endsection
 
 <script>
 
-    {{--var listBeats = @json($beats);--}}
 
-    {{--@foreach ($beats as $beat)--}}
-    {{--    {{$beat->music_path}}--}}
-    {{--@endforeach--}}
+    function myFunction() {
+        alert("Hello! I am an alert box!");
+    }
+
+    // var x = document.getElementById("myAudio");
+
+    function playAudio() {
+        document.getElementById("myAudio").play();
+    }
+
+    function pauseAudio() {
+        document.getElementById("myAudio").pause();
+    }
 
 
 </script>
