@@ -39,7 +39,7 @@
     <div>
         <audio id="myAudio">
 
-            <source src="{{ route('beat.show', ['filename' => 'plata.mp3']) }}" type="audio/mpeg" />
+{{--            <source src="{{ route('beat.show', ['filename' => 'plata.mp3']) }}" type="audio/mpeg" />--}}
 
         </audio>
     </div>
@@ -55,28 +55,31 @@
     <button onclick="playAudio()" type="button">Play Audio</button>
     <button onclick="pauseAudio()" type="button">Pause Audio</button>
 
-    <button onclick="myFunction()">Try it</button>
+    <button onclick="createRouteBeat()">Try it</button>
 
 
 @endsection
 
 <script>
 
-
-    function myFunction() {
+    function createRouteBeat() {
         var selectBeat = document.getElementById("select").value;
-        alert(selectBeat);
+        var route = "{{route('beat.show', ['filename => selectBeat'])}}".replace("{selectBeat}", selectBeat);
+        var reproductor = document.createElement("SOURCE");
+        reproductor.setAttribute("src", route);
+        reproductor.setAttribute("type", "audio/mpeg");
+        document.getElementById("myAudio").appendChild(reproductor);
+
     }
 
-    // var x = document.getElementById("myAudio");
-
     function playAudio() {
-        var x = document.getElementById("myAudio");
-        x.play();
+        var on = document.getElementById("myAudio");
+        on.play();
     }
 
     function pauseAudio() {
-        document.getElementById("myAudio").pause();
+        var off = document.getElementById("myAudio");
+        off.pause();
     }
 
 
