@@ -54,8 +54,7 @@
 
     <button onclick="playAudio()" type="button">Play Audio</button>
     <button onclick="pauseAudio()" type="button">Pause Audio</button>
-
-    <button onclick="createRouteBeat()">Try it</button>
+    <button onclick="deleteRouteBeat()" type="button">Cambiar Audio</button>
 
 
 @endsection
@@ -64,16 +63,29 @@
 
     function createRouteBeat() {
         var selectBeat = document.getElementById("select").value;
-        var route = "{{route('beat.show', ['filename => selectBeat'])}}".replace("{selectBeat}", selectBeat);
-        var reproductor = document.createElement("SOURCE");
+        var route = "{{route('beat.show', ['filename' => 'selectBeat'])}}".replace("selectBeat", selectBeat);
+        var reproductor = document.createElement("source");
         reproductor.setAttribute("src", route);
+        reproductor.setAttribute("id", "reproductor");
         reproductor.setAttribute("type", "audio/mpeg");
         document.getElementById("myAudio").appendChild(reproductor);
 
     }
 
+    function deleteRouteBeat(){
+        document.getElementById("myAudio").removeChild(reproductor);
+        var stopAudio = document.getElementById("myAudio");
+        stopAudio.load();
+    }
+
     function playAudio() {
         var on = document.getElementById("myAudio");
+        if (on){
+            createRouteBeat();
+        }else{
+         deleteRouteBeat();
+        }
+        // createRouteBeat();
         on.play();
     }
 
