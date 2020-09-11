@@ -47,14 +47,14 @@
     <div>
         <select name="" id="select">
             @foreach($beats as $beat)
-            <option value="{{$beat}}">{{$beat}}</option>
+            <option value="{{$beat}}" onclick="deleteRouteBeat()">{{$beat}}</option>
             @endforeach
         </select>
     </div>
 
     <button onclick="playAudio()" type="button">Play Audio</button>
     <button onclick="pauseAudio()" type="button">Pause Audio</button>
-    <button onclick="deleteRouteBeat()" type="button">Cambiar Audio</button>
+{{--    <button onclick="deleteRouteBeat()" type="button">Cambiar Audio</button>--}}
 
 
 @endsection
@@ -80,12 +80,12 @@
 
     function playAudio() {
         var on = document.getElementById("myAudio");
-        if (on){
-            createRouteBeat();
-        }else{
-         deleteRouteBeat();
-        }
-        // createRouteBeat();
+        // if (on){
+        //     createRouteBeat();
+        // }else{
+        //  deleteRouteBeat();
+        // }
+        createRouteBeat();
         on.play();
     }
 
