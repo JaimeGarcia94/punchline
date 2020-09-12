@@ -50,8 +50,17 @@
         </select>
     </div>
 
-    <button onclick="playAudio()" type="button">Play Audio</button>
-    <button onclick="pauseAudio()" type="button">Pause Audio</button>
+    <button onclick="playAudio()" id="buttonAudio" type="button">Play</button>
+{{--    <button onclick="pauseAudio()" type="button">Pause Audio</button>--}}
+
+{{--    <div>--}}
+{{--        <button id="button">Play</button>--}}
+{{--    </div>--}}
+
+{{--    <audio id="player">--}}
+{{--        <source src='http://localhost:8080/beats/mis-vicios.mp3' type='audio/mpeg'/>--}}
+{{--    </audio>--}}
+
 @endsection
 
 <script>
@@ -73,15 +82,37 @@
     }
 
     function playAudio() {
-        var onAudio = document.getElementById("myAudio");
-        createRouteBeat();
-        onAudio.play();
+        var audio = document.getElementById("myAudio");
+        var buttonAudio = document.getElementById("buttonAudio");
+        // createRouteBeat();
+        if(audio.paused){
+            audio.play();
+            buttonAudio.innerHTML = "Pause";
+        }else{
+            audio.pause();
+            buttonAudio.innerHTML = "Play";
+        }
+
     }
 
-    function pauseAudio() {
-        var offAudio = document.getElementById("myAudio");
-        offAudio.pause();
-    }
+    // function pauseAudio() {
+    //     var offAudio = document.getElementById("myAudio");
+    //     offAudio.pause();
+    // }
 
+
+
+    // var button = document.getElementById("button");
+    // var audio = document.getElementById("player");
+    //
+    // button.addEventListener("click", function(){
+    //     if(audio.paused){
+    //         audio.play();
+    //         button.innerHTML = "Pause";
+    //     } else {
+    //         audio.pause();
+    //         button.innerHTML = "Play";
+    //     }
+    // });
 
 </script>
