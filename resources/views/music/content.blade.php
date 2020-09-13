@@ -65,8 +65,7 @@
 
 <script>
 
-    var audio = document.getElementById("myAudio");
-    var buttonAudio = document.getElementById("buttonAudio");
+
 
     function createRouteBeat() {
         var selectBeat = document.getElementById("select").value;
@@ -79,6 +78,7 @@
     }
 
     function deleteRouteBeat(){
+        var buttonAudio = document.getElementById("buttonAudio");
         document.getElementById("myAudio").removeChild(reproductor);
         var stopAudio = document.getElementById("myAudio");
         stopAudio.load();
@@ -86,7 +86,8 @@
     }
 
     function playAudio() {
-
+        var audio = document.getElementById("myAudio");
+        var buttonAudio = document.getElementById("buttonAudio");
         createRouteBeat();
         if(audio.paused){
             audio.play();
