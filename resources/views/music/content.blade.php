@@ -65,6 +65,9 @@
 
 <script>
 
+    var audio = document.getElementById("myAudio");
+    var buttonAudio = document.getElementById("buttonAudio");
+
     function createRouteBeat() {
         var selectBeat = document.getElementById("select").value;
         var route = "{{route('beat.show', ['filename' => 'selectBeat'])}}".replace("selectBeat", selectBeat);
@@ -79,12 +82,12 @@
         document.getElementById("myAudio").removeChild(reproductor);
         var stopAudio = document.getElementById("myAudio");
         stopAudio.load();
+        buttonAudio.innerHTML = "Play";
     }
 
     function playAudio() {
-        var audio = document.getElementById("myAudio");
-        var buttonAudio = document.getElementById("buttonAudio");
-        // createRouteBeat();
+
+        createRouteBeat();
         if(audio.paused){
             audio.play();
             buttonAudio.innerHTML = "Pause";
