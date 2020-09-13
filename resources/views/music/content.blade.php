@@ -38,7 +38,7 @@
 
     <div>
         <audio id="myAudio">
-
+            <source id="reproductor" type="audio/mpeg">
         </audio>
     </div>
 
@@ -46,6 +46,7 @@
         <select name="" id="select">
             @foreach($beats as $beat)
             <option value="{{$beat}}" onclick="deleteRouteBeat()">{{$beat}}</option>
+{{--            <option value="{{$beat}}" onclick="deleteRouteBeat()">{{$beat}}</option>--}}
             @endforeach
         </select>
     </div>
@@ -70,10 +71,11 @@
     function createRouteBeat() {
         var selectBeat = document.getElementById("select").value;
         var route = "{{route('beat.show', ['filename' => 'selectBeat'])}}".replace("selectBeat", selectBeat);
-        var reproductor = document.createElement("source");
+        // var reproductor = document.createElement("source");
+        var reproductor = document.getElementById("reproductor");
         reproductor.setAttribute("src", route);
-        reproductor.setAttribute("id", "reproductor");
-        reproductor.setAttribute("type", "audio/mpeg");
+        // reproductor.setAttribute("id", "reproductor");
+        // reproductor.setAttribute("type", "audio/mpeg");
         document.getElementById("myAudio").appendChild(reproductor);
     }
 
