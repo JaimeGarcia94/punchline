@@ -38,7 +38,7 @@
 
     <div>
         <audio id="myAudio">
-            <source id="reproductor" type="audio/mpeg">
+            <source src="" id="reproductor" type="audio/mpeg">
         </audio>
     </div>
 
@@ -46,79 +46,41 @@
         <select name="" id="select">
             @foreach($beats as $beat)
             <option value="{{$beat}}" onclick="deleteRouteBeat()">{{$beat}}</option>
-{{--            <option value="{{$beat}}" onclick="deleteRouteBeat()">{{$beat}}</option>--}}
             @endforeach
         </select>
     </div>
 
     <button onclick="playAudio()" id="buttonAudio" type="button">Play</button>
-{{--    <button onclick="pauseAudio()" type="button">Pause Audio</button>--}}
-
-{{--    <div>--}}
-{{--        <button id="button">Play</button>--}}
-{{--    </div>--}}
-
-{{--    <audio id="player">--}}
-{{--        <source src='http://localhost:8080/beats/mis-vicios.mp3' type='audio/mpeg'/>--}}
-{{--    </audio>--}}
 
 @endsection
 
 <script>
-
-
-
     function createRouteBeat() {
         var selectBeat = document.getElementById("select").value;
         var route = "{{route('beat.show', ['filename' => 'selectBeat'])}}".replace("selectBeat", selectBeat);
-        // var reproductor = document.createElement("source");
         var reproductor = document.getElementById("reproductor");
         reproductor.setAttribute("src", route);
-        // reproductor.setAttribute("id", "reproductor");
-        // reproductor.setAttribute("type", "audio/mpeg");
         document.getElementById("myAudio").appendChild(reproductor);
     }
 
     function deleteRouteBeat(){
-        var buttonAudio = document.getElementById("buttonAudio");
-        document.getElementById("myAudio").removeChild(reproductor);
+        var buttonChangeAudio = document.getElementById("buttonAudio");
         var stopAudio = document.getElementById("myAudio");
         stopAudio.load();
-        buttonAudio.innerHTML = "Play";
+        buttonChangeAudio.innerHTML = "Play";
+        document.getElementsByTagName("source")[0].removeAttribute("src");
     }
 
     function playAudio() {
         var audio = document.getElementById("myAudio");
-        var buttonAudio = document.getElementById("buttonAudio");
+        var buttonChangeAudio = document.getElementById("buttonAudio");
         createRouteBeat();
         if(audio.paused){
             audio.play();
-            buttonAudio.innerHTML = "Pause";
+            buttonChangeAudio.innerHTML = "Pause";
         }else{
             audio.pause();
-            buttonAudio.innerHTML = "Play";
+            buttonChangeAudio.innerHTML = "Play";
         }
-
     }
-
-    // function pauseAudio() {
-    //     var offAudio = document.getElementById("myAudio");
-    //     offAudio.pause();
-    // }
-
-
-
-    // var button = document.getElementById("button");
-    // var audio = document.getElementById("player");
-    //
-    // button.addEventListener("click", function(){
-    //     if(audio.paused){
-    //         audio.play();
-    //         button.innerHTML = "Pause";
-    //     } else {
-    //         audio.pause();
-    //         button.innerHTML = "Play";
-    //     }
-    // });
-
 </script>
