@@ -5,7 +5,7 @@
 </div>
 
 <div>
-    <select name="" id="select">
+    <select id="select">
         @foreach($beats as $beat)
             <option value="{{$beat}}" onclick="deleteRouteBeat()">{{$beat}}</option>
         @endforeach

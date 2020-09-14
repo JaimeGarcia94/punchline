@@ -30,7 +30,7 @@ class MusicController extends Controller
             $fileBeat->music_path = $music_path_name;
 
         }
-        
+
         $fileBeat->save();
 
         return redirect()->route('beats')->with(['message'=>'beat añadido correctamente']);
