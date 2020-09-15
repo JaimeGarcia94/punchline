@@ -50,10 +50,10 @@
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
                             <div class="container-card-panel">
-                                <a href="#">
+                                <a href="{{ route('images') }}">
                                     <div class="text-hover">
                                         <h5 class="text-justify">Images</h5>
-                                        <p>Palabras cada 10 segundos</p>
+                                        <p>imagenes cada 10 segundos</p>
                                     </div>
                                     <img class="card-img img-hidden" src="{{ url('/images/not-user.jpg') }}" alt="Card image">
                                 </a>

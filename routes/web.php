@@ -41,3 +41,6 @@ Route::post('/beats/insert', 'MusicController@insertBeat')->name('beats.insert')
 //route game easy mode
 Route::get('/easyMode', 'EasyModeController@index')->name('easyMode');
 Route::get('/beats/{filename}', 'EasyModeController@getMusic')->name('beat.show');
+
+//route game images
+Route::get('/images', 'ImagesController@index')->name('images');
