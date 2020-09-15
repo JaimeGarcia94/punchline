@@ -18,8 +18,7 @@
         const randomWords = Math.floor(Math.random()*(listwords.length ));
         return listwords[randomWords];
     }
-
-
+    
     function createRouteBeat() {
         var selectBeat = document.getElementById("select").value;
         var route = "{{route('beat.show', ['filename' => 'selectBeat'])}}".replace("selectBeat", selectBeat);
