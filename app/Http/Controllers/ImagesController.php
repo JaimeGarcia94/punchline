@@ -8,6 +8,6 @@ class ImagesController extends Controller
 {
     public function index()
     {
-        return view('images.content');
+        return view('imagesMode.content');
     }
 }
