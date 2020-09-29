@@ -15,9 +15,17 @@ class ImagesController extends Controller
 
     public function getImage()
     {
-        $urlImage = 'https://picsum.photos/200/300';
+//        $urlImage = json_decode( file_get_contents('https://picsum.photos/200/300'), true);
+//
+//        dd($urlImage['author']);
+//
+//        return $urlImage;
 
-        return $urlImage;
+
+        $curlHandler = curl_init('https://picsum.photos/v2/list');
+        $response = curl_exec($curlHandler);
+        var_dump(curl_getinfo($curlHandler));
+        curl_close($curlHandler);
 
     }
 }
