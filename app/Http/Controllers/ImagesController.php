@@ -8,6 +8,16 @@ class ImagesController extends Controller
 {
     public function index()
     {
-        return view('imagesMode.content');
+        return view('imagesMode.content', [
+            "images" => $this->getImage()
+        ]);
+    }
+
+    public function getImage()
+    {
+        $urlImage = 'https://picsum.photos/200/300';
+
+        return $urlImage;
+
     }
 }
