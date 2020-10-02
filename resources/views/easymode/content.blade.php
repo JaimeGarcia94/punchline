@@ -1,9 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>WORDS</h1>
     <h1 id="word" class="text-center"></h1>
-
     @include('includes.player')
 @endsection
 

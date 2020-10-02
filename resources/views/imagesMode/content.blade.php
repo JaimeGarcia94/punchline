@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Imagenes</h1>
-<img id="images" alt="" style="width: 400px;height: 400px;">
+<img id="images" class="text-center" style="width: 400px;height: 400px;">
 
 @include('includes.player')
 @endsection
