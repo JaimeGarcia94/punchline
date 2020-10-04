@@ -1,10 +1,11 @@
-function createRouteBeat() {
-    var selectBeat = document.getElementById("select").value;
-    var route = "{{route('beat.show', ['filename' => 'selectBeat'])}}".replace("selectBeat", selectBeat);
-    var reproductor = document.getElementById("reproductor");
-    reproductor.setAttribute("src", route);
-    document.getElementById("myAudio").appendChild(reproductor);
-}
+// function createRouteBeat() {
+//     var selectBeat = document.getElementById("select").value;
+//     var route = "{{route('beat.show', ['filename' => 'selectBeat'])}}".replace("selectBeat", selectBeat);
+//     // var route = "{{route('beat.show', ['filename' => 'selectBeat'])}}".replace("selectBeat", selectBeat);
+//     var reproductor = document.getElementById("reproductor");
+//     reproductor.setAttribute("src", route);
+//     document.getElementById("myAudio").appendChild(reproductor);
+// }
 
 function deleteRouteBeat() {
     var buttonChangeAudio = document.getElementById("buttonAudio");
