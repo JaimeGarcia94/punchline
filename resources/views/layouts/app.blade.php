@@ -25,6 +25,7 @@
     <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
     <link href="{{ asset('css/configuration.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/panel-game.css') }}" rel="stylesheet">
 
 
 </head>

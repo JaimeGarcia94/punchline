@@ -1,0 +1,17 @@
+.box-game{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    text-align: center;
+    padding: 50px 50px 50px 50px;
+    border: 0;
+    color: #666;
+}
+
+#images{
+    width: 400px;
+    height: 300px;
+    max-width: 100%;
+}
+
+.content-player{
+    margin-top: 30px;
+}

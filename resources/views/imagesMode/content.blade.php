@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<img id="images" class="text-center" style="width: 400px;height: 400px;">
-
-@include('includes.player')
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="box-game">
+                    <img id="images" class="text-center">
+                    @include('includes.player')
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 @stack('script')
 <script>

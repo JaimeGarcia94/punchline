@@ -4,15 +4,17 @@
     </audio>
 </div>
 
-<div>
+<div class="content-player">
     <select id="select">
         @foreach($beats as $beat)
             <option value="{{$beat}}" onclick="deleteRouteBeat()">{{$beat}}</option>
         @endforeach
     </select>
 </div>
+<div>
+    <button onclick="playAudio()" id="buttonAudio" type="button">Play</button>
+</div>
 
-<button onclick="playAudio()" id="buttonAudio" type="button">Play</button>
 
 @push('script')
 <script>
