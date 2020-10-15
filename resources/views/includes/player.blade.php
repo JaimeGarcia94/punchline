@@ -10,7 +10,7 @@
             <option value="{{$beat}}" onclick="deleteRouteBeat()">{{$beat}}</option>
         @endforeach
     </select>
-    <button onclick="playAudio()" id="buttonAudio" type="button"><i class = "fa fa-play-circle-o 5px"></i></button>
+    <button onclick="playAudio()" id="buttonAudio" type="button"><i class = "fa fa-play-circle-o fa-4x"></i></button>
 </div>
 
 @push('script')
@@ -27,7 +27,7 @@
         var buttonChangeAudio = document.getElementById("buttonAudio");
         var stopAudio = document.getElementById("myAudio");
         stopAudio.load();
-        buttonChangeAudio.innerHTML = '<i class = "fa fa-play-circle-o"></i>';
+        buttonChangeAudio.innerHTML = '<i class = "fa fa-play-circle-o fa-4x"></i>';
         document.getElementsByTagName("source")[0].removeAttribute("src");
     }
 
@@ -37,10 +37,10 @@
         createRouteBeat();
         if(audio.paused){
             audio.play();
-            buttonChangeAudio.innerHTML = '<i class = "fa fa-pause-circle-o"></i>';
+            buttonChangeAudio.innerHTML = '<i class = "fa fa-pause-circle-o fa-4x"></i>';
         }else{
             audio.pause();
-            buttonChangeAudio.innerHTML = '<i class = "fa fa-play-circle-o"></i>';
+            buttonChangeAudio.innerHTML = '<i class = "fa fa-play-circle-o fa-4x"></i>';
         }
     }
 </script>
