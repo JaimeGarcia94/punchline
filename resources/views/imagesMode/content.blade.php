@@ -5,6 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="box-game">
+                    <h1 class="title">Images Mode</h1>
                     <img id="images" class="text-center">
                     @include('includes.player')
                 </div>

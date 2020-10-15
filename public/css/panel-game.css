@@ -6,6 +6,11 @@
     color: #666;
 }
 
+.title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 #images{
     width: 400px;
     height: 300px;
@@ -14,4 +19,5 @@
 
 .content-player{
     margin-top: 30px;
+    width: 100%;
 }
