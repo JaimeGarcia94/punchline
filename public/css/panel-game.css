@@ -20,12 +20,16 @@
 .content-player{
     margin-top: 30px;
     width: 100%;
+    text-align: center;
 }
 
-#select{
+.content-player #select{
+    display: inline;
+    width: 36%;
     height: 4.125rem;
     border: 2px solid #DCDCDC;
     margin: 0 0 1rem;
+    padding: 0.5rem;
     font-size: 1rem;
     font-weight: 600;
     color: #000;
@@ -43,6 +47,7 @@
     font: inherit;
     cursor: pointer;
     outline: inherit;
+    vertical-align: middle;
 }
 
 #buttonAudio:hover{
