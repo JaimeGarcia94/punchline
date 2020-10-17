@@ -1,5 +1,5 @@
 <div>
-    <audio id="myAudio">
+    <audio id="myAudio" onended="finishAudio()">
         <source src="" id="reproductor" type="audio/mpeg">
     </audio>
 </div>
@@ -45,6 +45,11 @@
             audio.pause();
             buttonChangeAudio.innerHTML = '<i class = "fa fa-play-circle-o fa-4x"></i>';
         }
+    }
+
+    function finishAudio() {
+        var buttonChangeAudio = document.getElementById("buttonAudio");
+        buttonChangeAudio.innerHTML = '<i class = "fa fa-play-circle-o fa-4x"></i>';
     }
 </script>
 @endpush
