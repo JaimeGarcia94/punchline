@@ -6,7 +6,7 @@
 @endsection
 @stack('script')
 <script>
-    var listwords = @json($words);
+    var listWords = @json($words);
 
     setInterval(function () {
         var words = document.getElementById("word");
@@ -14,7 +14,7 @@
     }, 10000);
 
     function getRandomWord(){
-        const randomWords = Math.floor(Math.random()*(listwords.length ));
-        return listwords[randomWords];
+        const randomWords = Math.floor(Math.random()*(listWords.length ));
+        return listWords[randomWords];
     }
 </script>
