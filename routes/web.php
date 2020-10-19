@@ -46,4 +46,4 @@ Route::get('/easyMode', 'EasyModeController@index')->name('easyMode');
 Route::get('/imagesMode', 'ImagesController@index')->name('imagesMode');
 
 //route game images and word
-Route::get('/randomMode', 'ImagesController@index')->name('imagesMode');
+Route::get('/randomMode', 'RandomModeController@index')->name('randomMode');
