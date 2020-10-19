@@ -37,13 +37,13 @@ Route::post('/config/update/password', 'ConfigController@updatePassword')->name(
 //route page music beats
 Route::get('/beats', 'MusicController@index')->name('beats');
 Route::post('/beats/insert', 'MusicController@insertBeat')->name('beats.insert');
+Route::get('/beats/{filename}', 'EasyModeController@getMusic')->name('beat.show');
 
 //route game easy mode
 Route::get('/easyMode', 'EasyModeController@index')->name('easyMode');
-Route::get('/beats/{filename}', 'EasyModeController@getMusic')->name('beat.show');
 
 //route game images
 Route::get('/imagesMode', 'ImagesController@index')->name('imagesMode');
 
 //route game images and word
-Route::get('/imagesMode', 'ImagesController@index')->name('imagesMode');
+Route::get('/randomMode', 'ImagesController@index')->name('imagesMode');
