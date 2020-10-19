@@ -44,3 +44,6 @@ Route::get('/beats/{filename}', 'EasyModeController@getMusic')->name('beat.show'
 
 //route game images
 Route::get('/imagesMode', 'ImagesController@index')->name('imagesMode');
+
+//route game images and word
+Route::get('/imagesMode', 'ImagesController@index')->name('imagesMode');
