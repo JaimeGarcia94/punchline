@@ -6,6 +6,7 @@
             <div class="col-md-12">
                 <div class="box-game">
                     <h1 class="title">Random Mode</h1>
+                    <img src="/images/not-user.jpg" alt="" id="pre-image">
                     <h1 id="word" class="text-center"></h1>
                     <h1 id="secondWord" class="text-center"></h1>
                     <img id="images" class="text-center">
@@ -22,7 +23,7 @@
     var listWords = @json($words);
     var listImages = @json($images);
 
-    function initGame(){
+    setTimeout (function() {
         var words = document.getElementById("word");
         words.innerHTML = getRandomWord();
 
@@ -31,8 +32,10 @@
 
         var images = document.getElementById("images");
         images.src = getRandomImage();
-    }
-    setTimeout(initGame, 10000);
+
+        var content = document.getElementById("pre-image");
+        content.style.display = "none";
+    },10000);
 
     setInterval(function () {
         var words = document.getElementById("word");
