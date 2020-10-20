@@ -22,7 +22,7 @@
     var listWords = @json($words);
     var listImages = @json($images);
 
-    const initGame = function(){
+    function initGame(){
         var words = document.getElementById("word");
         words.innerHTML = getRandomWord();
 
@@ -31,7 +31,7 @@
 
         var images = document.getElementById("images");
         images.src = getRandomImage();
-    };
+    }
     setTimeout(initGame, 10000);
 
     setInterval(function () {
