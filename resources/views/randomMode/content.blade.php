@@ -12,7 +12,6 @@
                     <div class="col-md-12">
                         @include('includes.player')
                     </div>
-
                 </div>
             </div>
         </div>
@@ -22,6 +21,18 @@
 <script>
     var listWords = @json($words);
     var listImages = @json($images);
+
+    const initGame = function(){
+        var words = document.getElementById("word");
+        words.innerHTML = getRandomWord();
+
+        var secondWord = document.getElementById("secondWord");
+        secondWord.innerHTML = getSecondRandomWord();
+
+        var images = document.getElementById("images");
+        images.src = getRandomImage();
+    };
+    setTimeout(initGame, 10000);
 
     setInterval(function () {
         var words = document.getElementById("word");
