@@ -6,10 +6,11 @@
             <div class="col-md-12">
                 <div class="box-game">
                     <h1 class="title">Random Mode</h1>
-                    <img src="/images/not-user.jpg" alt="" id="pre-image">
-                    <h1 id="word" class="text-center"></h1>
-                    <h1 id="secondWord" class="text-center"></h1>
-                    <img id="images" class="text-center">
+                    <div class="content-box" id="content-box">
+                        <h1 id="word" class="text-center"></h1>
+                        <h1 id="secondWord" class="text-center"></h1>
+                        <img id="images" class="text-center">
+                    </div>
                     <div class="col-md-12">
                         @include('includes.player')
                     </div>
@@ -23,6 +24,15 @@
     var listWords = @json($words);
     var listImages = @json($images);
 
+    function showMessageInit() {
+        var contentBox = document.getElementById("content-box");
+        if (contentBox.style.visibility === "hidden") {
+            contentBox.style.display = "block";
+        } else {
+            document.getElementsByClassName("content-box")[0].removeAttribute("id");
+        }
+    }
+
     setTimeout (function() {
         var words = document.getElementById("word");
         words.innerHTML = getRandomWord();
@@ -33,8 +43,8 @@
         var images = document.getElementById("images");
         images.src = getRandomImage();
 
-        var content = document.getElementById("pre-image");
-        content.style.display = "none";
+
+        showMessageInit();
     },10000);
 
     setInterval(function () {

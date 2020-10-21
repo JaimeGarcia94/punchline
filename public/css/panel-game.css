@@ -12,15 +12,15 @@
 }
 
 #images{
-    width: 400px;
+    /*width: 400px;*/
     height: 300px;
     max-width: 100%;
 }
 
-#pre-image{
-    width: 400px;
-    height: 300px;
-    max-width: 100%;
+#content-box{
+    background-image: url("https://amymhaddad.s3.amazonaws.com/morocco-blue.png");
+    height: 400px;
+    width: 100%;
 }
 
 .content-player{
