@@ -31,7 +31,7 @@ class RandomModeController extends Controller
 
     public function getImage()
     {
-        $url = "https://picsum.photos/v2/list?page=2&limit=100";
+        $url = "https://picsum.photos/v2/list?page=2&limit=200";
         $json = file_get_contents($url);
         $arraydata = json_decode($json);
 
