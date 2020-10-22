@@ -8,7 +8,6 @@
                     <h1 class="title">Easy Mode</h1>
                     <div class="content-box" id="content-box">
                         <h1 id="word" class="text-center"></h1>
-                        <h1 id="secondWord" class="text-center"></h1>
                     </div>
                     <div class="col-md-12">
                         @include('includes.player')
@@ -35,9 +34,6 @@
         var words = document.getElementById("word");
         words.innerHTML = getRandomWord();
 
-        var secondWord = document.getElementById("secondWord");
-        secondWord.innerHTML = getSecondRandomWord();
-
         showMessageInit();
     },10000);
 
@@ -45,17 +41,10 @@
         var words = document.getElementById("word");
         words.innerHTML = getRandomWord();
 
-        var secondWord = document.getElementById("secondWord");
-        secondWord.innerHTML = getSecondRandomWord();
     }, 10000);
 
     function getRandomWord(){
         const randomWords = Math.floor(Math.random()*(listWords.length));
         return listWords[randomWords];
-    }
-
-    function getSecondRandomWord(){
-        const secondRandomWords = Math.floor(Math.random()*(listWords.length));
-        return listWords[secondRandomWords];
     }
 </script>
