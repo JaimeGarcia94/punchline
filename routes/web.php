@@ -50,3 +50,6 @@ Route::get('/randomMode', 'RandomModeController@index')->name('randomMode');
 
 //route game extreme mode
 Route::get('/extremeMode', 'ExtremeModeController@index')->name('extremeMode');
+
+//route game history mode
+Route::get('/historyMode', 'HistoryModeController@index')->name('historyMode');

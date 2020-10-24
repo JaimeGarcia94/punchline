@@ -59,14 +59,13 @@
                         </div>
 
                         <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                            <div class="container-card-panel card bg-dark">
-                                <a href="#" class="link-panel-game text-white">
-                                    <img class="card-img" src="{{ url('/images/not-user.jpg') }}" alt="Card image">
-                                    <div class="card-img-overlay">
-                                        <div class="description-card-game">
-                                            <h5 class="card-title">Card title</h5>
-                                        </div>
+                            <div class="container-card-panel">
+                                <a href="{{ route('historyMode') }}">
+                                    <div class="text-hover">
+                                        <h5 class="text-justify">History Mode</h5>
+                                        <p>Crea una historia con tres palabras durante un minuto</p>
                                     </div>
+                                    <img class="card-img img-hidden" src="{{ url('/images/not-user.jpg') }}" alt="Card image">
                                 </a>
                             </div>
                         </div>
