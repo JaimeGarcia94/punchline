@@ -47,3 +47,6 @@ Route::get('/imagesMode', 'ImagesController@index')->name('imagesMode');
 
 //route game images and word
 Route::get('/randomMode', 'RandomModeController@index')->name('randomMode');
+
+//route game extreme mode
+Route::get('/extremeMode', 'ExtremeModeController@index')->name('extremeMode');

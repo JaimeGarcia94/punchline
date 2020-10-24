@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="box-game">
-                    <h1 class="title">Easy Mode</h1>
+                    <h1 class="title">Extreme Mode</h1>
                     <div class="content-box" id="content-box">
                         <h1 id="word" class="text-center"></h1>
                     </div>
@@ -35,13 +35,13 @@
         words.innerHTML = getRandomWord();
 
         showMessageInit();
-    },10000);
+    },5000);
 
     setInterval(function () {
         var words = document.getElementById("word");
         words.innerHTML = getRandomWord();
 
-    },10000);
+    },5000);
 
     function getRandomWord(){
         const randomWords = Math.floor(Math.random()*(listWords.length));
