@@ -6,9 +6,7 @@
             <div class="col-md-12">
                 <div class="box-game">
                     <h1 class="title">4 x 4 Mode</h1>
-                    <div class="counter">
-                        contador
-                    </div>
+                    @include('includes.countdown')
                     <div class="col-md-12">
                         @include('includes.player')
                     </div>
@@ -17,7 +15,6 @@
         </div>
     </div>
 @endsection
+@stack('countdown')
 @stack('script')
-<script>
 
-</script>
