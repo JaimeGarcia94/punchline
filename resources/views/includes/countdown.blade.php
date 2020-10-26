@@ -1,44 +1,41 @@
 <div id="countdown">
-    <button onclick="secondPassed()">click</button>
+
 </div>
+<button onclick="clickCountDown()">Entrena</button>
 
 @push('countdown')
 <script>
+
     var seconds = 120;
-    function secondPassed(){
+    function countdown(){
+        var remainingSeconds = seconds % 120;
+        if (remainingSeconds < 10) {
+            remainingSeconds = +remainingSeconds;
+        }
+        document.getElementById('countdown').innerHTML = remainingSeconds;
+        if (seconds === 0) {
+            clearInterval(clickCountDown);
+            document.getElementById('countdown').innerHTML = "0";
+        } else {
+            seconds--;
+        }
+    }
+
+    function clickCountDown(){
         setInterval(function () {
-            var remainingSeconds = seconds % 120;
-            if (remainingSeconds < 10) {
-                remainingSeconds = +remainingSeconds;
-            }
-            document.getElementById('countdown').innerHTML = remainingSeconds;
-            if (seconds === 0) {
-                // clearInterval(countdownTimer);
-                document.getElementById('countdown').innerHTML = "0";
-            } else {
-                seconds--;
-            }
+            countdown();
         },1000);
     }
 
-
-    // var seconds = 120;
-    // function secondPassed() {
-    //     var remainingSeconds = seconds % 120;
-    //     if (remainingSeconds < 10) {
-    //         remainingSeconds = +remainingSeconds;
-    //     }
-    //     document.getElementById('countdown').innerHTML = remainingSeconds;
-    //     if (seconds === 0) {
-    //         clearInterval(countdownTimer);
-    //         document.getElementById('countdown').innerHTML = "0";
+    // var timeleft = 10;
+    // var downloadTimer = setInterval(function(){
+    //     if(timeleft <= 0){
+    //         clearInterval(downloadTimer);
+    //         document.getElementById("countdown").innerHTML = "Finished";
     //     } else {
-    //         seconds--;
+    //         document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
     //     }
-    // }
-    // var countdownTimer = setInterval(function () {
-    //     secondPassed();
-    // },1000);
-
+    //     timeleft -= 1;
+    // }, 1000);
 </script>
 @endpush
