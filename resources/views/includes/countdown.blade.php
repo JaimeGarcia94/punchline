@@ -1,24 +1,44 @@
 <div id="countdown">
-    <button onclick="f()">Cuenta atrás</button>
+    <button onclick="secondPassed()">click</button>
 </div>
 
 @push('countdown')
 <script>
-    function f() {
-        alert("hola");
+    var seconds = 120;
+    function secondPassed(){
+        setInterval(function () {
+            var remainingSeconds = seconds % 120;
+            if (remainingSeconds < 10) {
+                remainingSeconds = +remainingSeconds;
+            }
+            document.getElementById('countdown').innerHTML = remainingSeconds;
+            if (seconds === 0) {
+                // clearInterval(countdownTimer);
+                document.getElementById('countdown').innerHTML = "0";
+            } else {
+                seconds--;
+            }
+        },1000);
     }
-    // let cronometro = document.getElementById("countdown");
-    // let final = Date.now() + 60000;
-    // let elcrono = setInterval(tiempo,10);
-    // function tiempo() {
-    //     let diferencia= final-Date.now();
-    //     let sg = diferencia/1000;
-    //     if (diferencia<=0) {
-    //         clearInterval(elcrono);
-    //         cronometro.classList.add('rojo');
-    //         sg=0.0;
+
+
+    // var seconds = 120;
+    // function secondPassed() {
+    //     var remainingSeconds = seconds % 120;
+    //     if (remainingSeconds < 10) {
+    //         remainingSeconds = +remainingSeconds;
     //     }
-    //     cronometro.innerHTML=sg;
+    //     document.getElementById('countdown').innerHTML = remainingSeconds;
+    //     if (seconds === 0) {
+    //         clearInterval(countdownTimer);
+    //         document.getElementById('countdown').innerHTML = "0";
+    //     } else {
+    //         seconds--;
+    //     }
     // }
+    // var countdownTimer = setInterval(function () {
+    //     secondPassed();
+    // },1000);
+
 </script>
 @endpush
