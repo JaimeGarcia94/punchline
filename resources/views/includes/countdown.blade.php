@@ -1,41 +1,23 @@
 <div id="countdown">
-
+    <span id="content-time">120</span>
 </div>
-<button onclick="clickCountDown()">Entrena</button>
+<button onclick="clickCountDown()" id="text-button">Empieza el tiempo</button>
 
 @push('countdown')
 <script>
-
-    var seconds = 120;
-    function countdown(){
-        var remainingSeconds = seconds % 120;
-        if (remainingSeconds < 10) {
-            remainingSeconds = +remainingSeconds;
-        }
-        document.getElementById('countdown').innerHTML = remainingSeconds;
-        if (seconds === 0) {
-            clearInterval(clickCountDown);
-            document.getElementById('countdown').innerHTML = "0";
-        } else {
-            seconds--;
-        }
-    }
-
     function clickCountDown(){
-        setInterval(function () {
-            countdown();
+        var countdown= 120;
+        var downloadTimer = setInterval(function(){
+            countdown--;
+            document.getElementById("content-time").innerHTML = countdown;
+            document.getElementById("text-button").style.visibility = "hidden";
+            if(countdown <= 0){
+                clearInterval(downloadTimer);
+                document.getElementById("content-time").innerHTML = "120";
+                document.getElementById("text-button").style.visibility = "visible";
+                document.getElementById("text-button").innerHTML = "Empieza el tiempo";
+            }
         },1000);
     }
-
-    // var timeleft = 10;
-    // var downloadTimer = setInterval(function(){
-    //     if(timeleft <= 0){
-    //         clearInterval(downloadTimer);
-    //         document.getElementById("countdown").innerHTML = "Finished";
-    //     } else {
-    //         document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
-    //     }
-    //     timeleft -= 1;
-    // }, 1000);
 </script>
 @endpush
