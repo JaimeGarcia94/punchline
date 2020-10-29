@@ -1,6 +1,18 @@
-<div id="countdown">
-    <span id="content-time">120</span>
+{{--<div id="countdown">--}}
+{{--    <span id="content-time">120</span>--}}
+{{--</div>--}}
+<div id="container">
+
+    <div id="main">
+
+        <div id="inner-circle"></div>
+        <div id="center-circle"></div>
+        <div id="countdown">
+            <span id="content-time">120</span>
+        </div>
+    </div>
 </div>
+
 <button onclick="clickCountDown()" id="text-button">Empieza el tiempo</button>
 
 @push('countdown')
