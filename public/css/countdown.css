@@ -68,15 +68,14 @@
     color:#746EBB;
     text-shadow: 0 2px 2px #000;
     font-weight:bold;
-    margin: -130px auto auto 89px;
+    margin: -130px auto auto 90px;
 }
 
 @media (max-width: 375px) {
     #countdown {
-        margin: -130px auto auto 62px;
+        margin: -130px auto auto 63px;
     }
 }
-
 
 @-webkit-keyframes aura {
     0%{
