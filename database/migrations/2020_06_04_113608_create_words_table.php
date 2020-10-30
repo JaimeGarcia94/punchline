@@ -17,6 +17,7 @@ class CreateWordsTable extends Migration
             $table->id();
             $table->string('word', 100)->nullable();
             $table->string('history', 255)->nullable();
+            $table->string('termination', 255)->nullable();
             $table->foreignId('game_id')->constrained('games','id');
             $table->timestamps();
             $table->engine = 'InnoDB';
