@@ -83,6 +83,20 @@
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                            <div class="container-card-panel">
+                                <a href="{{ '' }}">
+                                    <div class="text-hover">
+                                        <h5 class="text-justify">Term Mode</h5>
+                                        <p>Terminaciones cada 5 segundos</p>
+                                    </div>
+                                    <img class="card-img img-hidden" src="{{ url('/images/not-user.jpg') }}" alt="Card image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
