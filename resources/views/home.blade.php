@@ -86,7 +86,7 @@
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
                             <div class="container-card-panel">
-                                <a href="{{ '' }}">
+                                <a href="{{ route('terminationMode') }}">
                                     <div class="text-hover">
                                         <h5 class="text-justify">Term Mode</h5>
                                         <p>Terminaciones cada 5 segundos</p>

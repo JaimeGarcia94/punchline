@@ -56,3 +56,6 @@ Route::get('/historyMode', 'HistoryModeController@index')->name('historyMode');
 
 //route game crossFire mode
 Route::get('/crossFireMode', 'CrossFireModeController@index')->name('crossFireMode');
+
+//route game terminations mode
+Route::get('/terminationMode', 'TerminationModeController@index')->name('terminationMode');
