@@ -12,20 +12,20 @@ class HistoryModeController extends Controller
     public function index()
     {
         return view('historyMode.content',[
-            "words" => $this->getWords(),
+            "histories" => $this->getHistory(),
             'beats' => $this->getAllMusic()
         ]);
     }
 
-    public function getWords()
+    public function getHistory()
     {
-        $words = Word::all('word');
+        $histories = Word::all('history');
 
-        foreach ($words as $word){
-            $array_word[] = $word->word;
+        foreach ($histories as $history){
+            $array_history[] = $history->history;
         }
 
-        return $array_word;
+        return $array_history;
     }
 
     public function getMusic($filename)

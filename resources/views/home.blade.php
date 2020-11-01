@@ -63,7 +63,7 @@
                                 <a href="{{ route('historyMode') }}">
                                     <div class="text-hover">
                                         <h5 class="text-justify">History Mode</h5>
-                                        <p>Crea una historia con tres palabras durante un minuto</p>
+                                        <p>Desarrolla la historia</p>
                                     </div>
                                     <img class="card-img img-hidden" src="{{ url('/images/not-user.jpg') }}" alt="Card image">
                                 </a>
@@ -88,7 +88,7 @@
                             <div class="container-card-panel">
                                 <a href="{{ route('terminationMode') }}">
                                     <div class="text-hover">
-                                        <h5 class="text-justify">Term Mode</h5>
+                                        <h5 class="text-justify">Termination Mode</h5>
                                         <p>Terminaciones cada 5 segundos</p>
                                     </div>
                                     <img class="card-img img-hidden" src="{{ url('/images/not-user.jpg') }}" alt="Card image">
