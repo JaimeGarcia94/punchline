@@ -49,4 +49,7 @@
     }
 }
 
-
+/*footer*/
+.card-footer{
+    box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.075) !important;
+}
