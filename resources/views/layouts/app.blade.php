@@ -97,8 +97,8 @@
 
         <main class="py-4">
             @yield('content')
-
-            
+        </main>
+        
         <footer class="card-footer font-small mdb-color pt-4 bg-white shadow-sm">
             <div class="container text-center text-md-left">
                 <div class="row text-center text-md-left mt-3 pb-3">
