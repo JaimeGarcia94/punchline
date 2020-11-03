@@ -104,16 +104,29 @@
                 <div class="row text-center text-md-left mt-3 pb-3">
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
 
-                        <a class="modal-cookies text-uppercase mb-4 font-weight-bold" data-toggle="modal" data-target=".bd-example-modal-lg">Términos y condiciones</a>
-
-                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content py-3">
-                                    Términos y condiciones
+                        <div class="text-center">
+                            <a href="#" class="text-uppercase mb-4 font-weight-bold modal-cookies" data-toggle="modal" data-target="#modalContactForm">Términos y condiciones</a>
+                        </div>
+                        <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header text-center">
+                                        <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body mx-3">
+                                        <div class="md-form mb-5">
+                                            <i class="fas fa-user prefix grey-text"></i>
+                                            <input type="text" id="form34" class="form-control validate">
+                                            <label data-error="wrong" data-success="right" for="form34">Your name</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
 
                     </div>
 
@@ -121,12 +134,22 @@
 
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
 
-                        <a class="modal-legal text-uppercase mb-4 font-weight-bold" data-toggle="modal" data-target=".bd-example-modal-lg">Bases legales</a>
+                        <div class="text-center">
+                            <a href="#" class="text-uppercase mb-4 font-weight-bold modal-legal" data-toggle="modal" data-target="#modalContactForm2">Bases legales</a>
+                        </div>
+                        <div class="modal fade" id="modalContactForm2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header text-center">
+                                        <h4 class="modal-title w-100 font-weight-bold">Test of 2nd modal</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
 
-                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content py-3">
-                                    Bases legales dsdfsdfsdfs
+                                    <p> This is a random test </p>
+
                                 </div>
                             </div>
                         </div>
@@ -160,3 +183,14 @@
     </div>
 </body>
 </html>
+<script>
+    (function(){
+        $('.modal').on('show.bs.modal', function (event) {
+            if (!$(this).data('template')) {
+                $(this).data('template', $(this).html())
+            } else {
+                $(this).html($(this).data('template'))
+            }
+        })
+    })()
+</script>
