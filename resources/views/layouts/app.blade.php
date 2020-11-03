@@ -98,18 +98,38 @@
         <main class="py-4">
             @yield('content')
         </main>
-        
+
         <footer class="card-footer font-small mdb-color pt-4 bg-white shadow-sm">
             <div class="container text-center text-md-left">
                 <div class="row text-center text-md-left mt-3 pb-3">
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">Términos y condiciones</h6>
+
+                        <a class="modal-cookies text-uppercase mb-4 font-weight-bold" data-toggle="modal" data-target=".bd-example-modal-lg">Términos y condiciones</a>
+
+                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content py-3">
+                                    Términos y condiciones
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
 
                     <hr class="w-100 clearfix d-md-none">
 
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">Bases legales</h6>
+
+                        <a class="modal-legal text-uppercase mb-4 font-weight-bold" data-toggle="modal" data-target=".bd-example-modal-lg">Bases legales</a>
+
+                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content py-3">
+                                    Bases legales dsdfsdfsdfs
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
 
