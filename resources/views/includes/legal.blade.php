@@ -1,8 +1,6 @@
-<div class="modal-header text-center">
-    <h3 class="modal-title w-100 font-weight-bold">AVISO LEGAL</h3>
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
+<div class="modal-header">
+    <h4 class="modal-title w-100 font-weight-bold">AVISO LEGAL</h4>
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
 </div>
 
 <h5 class="text-uppercase font-weight-bold mt-3">Identificación y Titularidad</h5>
@@ -11,17 +9,14 @@
 </p>
 
 <ul>
-    <li>Titular: Nombre y apellidos o razón social.</li>
-    <li>Registro mercantil:  Datos de la inscripción en el Registro mercantil (sociedades).</li>
-    <li>Título académico oficial, datos del colegio profesional y número de colegiado (si ejereces una profesión regulada).</li>
-    <li>NIF:  NIF</li>
-    <li>Domicilio: Domicilio social o una dirección dónde puedas recibir notificaciones.</li>
-    <li>Correo electrónico: Un correo de contacto.</li>
-    <li>Sitio Web URL. </li>
+    <li>Titular: Jaime García.</li>
+    <li>Domicilio: Valencia, España.</li>
+    <li>Correo electrónico: punchline@gmail.com.</li>
+    <li>https:Punchline.com</li>
 </ul>
 
 <h5 class="text-uppercase font-weight-bold">Finalidad</h5>
-<p>La finalidad del sitio Web URL es Finalidad del sitio web.</p>
+<p>La finalidad del sitio Web https:Punchline.com es el entretenimiento y entrenamiento de las batallas de gallos.</p>
 
 <h5 class="text-uppercase font-weight-bold">Condiciones de Uso</h5>
 <p>La utilización del sitio Web le otorga la condición de Usuario, e implica la aceptación completa de todas las
@@ -172,11 +167,11 @@
 <p>
     Este Aviso Legal se rige íntegramente por la legislación española.
 
-    Siempre que no haya una norma que obligue a otra cosa, para cuantas cuestiones se susciten sobre la interpretación, aplicación y cumplimiento de este Aviso Legal, así como de las reclamaciones que puedan derivarse de su uso, las partes acuerdan someterse a los Jueces y Tribunales de la provincia de PROVINCIA, con renuncia expresa de cualquier otra jurisdicción que pudiera corresponderles.
+    Siempre que no haya una norma que obligue a otra cosa, para cuantas cuestiones se susciten sobre la interpretación, aplicación y cumplimiento de este Aviso Legal, así como de las reclamaciones que puedan derivarse de su uso, las partes acuerdan someterse a los Jueces y Tribunales de la provincia de Valencia, con renuncia expresa de cualquier otra jurisdicción que pudiera corresponderles.
 </p>
 
 <h5 class="text-uppercase font-weight-bold">Contacto</h5>
 
 <p>
-    En caso de que usted tenga cualquier duda acerca de estas Condiciones legales o quiera realizar cualquier comentario sobre este sitio Web, puede enviar un mensaje de correo electrónico a la dirección correo electrónico.
+    En caso de que usted tenga cualquier duda acerca de estas Condiciones legales o quiera realizar cualquier comentario sobre este sitio Web, puede enviar un mensaje de correo electrónico a la dirección punchline@gmail.com.
 </p>
