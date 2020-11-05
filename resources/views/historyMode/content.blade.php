@@ -5,14 +5,13 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="box-game">
-                    <h1 class="title">Images Mode</h1>
+                    <h1 class="title">History Mode</h1>
                     <div class="content-box" id="content-box">
-                        <img id="images" class="text-center">
+                        <h1 id="history" class="text-center"></h1>
                     </div>
                     <div class="col-md-12">
                         @include('includes.player')
                     </div>
-
                 </div>
             </div>
         </div>
@@ -20,7 +19,7 @@
 @endsection
 @stack('script')
 <script>
-    var listImages = @json($images);
+    var listHistories = @json($histories);
 
     function showMessageInit() {
         var contentBox = document.getElementById("content-box");
@@ -32,21 +31,19 @@
     }
 
     setTimeout (function() {
-        var images = document.getElementById("images");
-        images.src = getRandomImage();
-
+        var histories = document.getElementById("history");
+        histories.innerHTML = getRandomHistories();
 
         showMessageInit();
     },10000);
 
     setInterval(function () {
-        var images = document.getElementById("images");
+        var histories = document.getElementById("history");
+        histories.innerHTML = getRandomHistories();
+    },60000);
 
-        images.src = getRandomImage();
-    }, 10000);
-
-    function getRandomImage(){
-        const randomImages = Math.floor(Math.random() * (listImages.length));
-        return listImages[randomImages];
+    function getRandomHistories(){
+        const randomHistories = Math.floor(Math.random()*(listHistories.length));
+        return listHistories[randomHistories];
     }
 </script>

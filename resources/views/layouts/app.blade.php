@@ -26,6 +26,7 @@
     <link href="{{ asset('css/configuration.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/panel-game.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/countdown.css') }}" rel="stylesheet">
 
 
 </head>
@@ -97,6 +98,75 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer class="card-footer font-small mdb-color pt-4 bg-white shadow-sm">
+            <div class="container text-center text-md-left">
+                <div class="row text-center text-md-left mt-3 pb-3">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <a href="#" class="text-uppercase mb-4 font-weight-bold modal-cookies" data-toggle="modal" data-target="#modalContactForm">
+                            Términos y condiciones
+                        </a>
+                        <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content modal-box">
+                                    @include('includes.condition')
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr class="w-100 clearfix d-md-none">
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <a href="#" class="text-uppercase mb-4 font-weight-bold modal-legal" data-toggle="modal" data-target="#myModal">
+                            Bases legales
+                        </a>
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content modal-box">
+                                    @include('includes.legal')
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr class="w-100 clearfix d-md-none">
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
+                        <p>
+                            <i class="fa fa-home mr-3"></i> Valencia, ES</p>
+                        <p>
+                            <i class="fa fa-envelope mr-3"></i> punchline@gmail.com</p>
+                    </div>
+                </div>
+
+                <hr>
+                <!-- Grid row -->
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-12 col-lg-12">
+                        <p class="text-center py-3">© 2020 Copyright:
+                            <a href="#">
+                                <strong> Punchline.com</strong>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
+<script>
+    (function(){
+        $('.modal').on('show.bs.modal', function (event) {
+            if (!$(this).data('template')) {
+                $(this).data('template', $(this).html())
+            } else {
+                $(this).html($(this).data('template'))
+            }
+        })
+    })()
+</script>

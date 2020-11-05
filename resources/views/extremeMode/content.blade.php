@@ -5,14 +5,13 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="box-game">
-                    <h1 class="title">Images Mode</h1>
+                    <h1 class="title">Extreme Mode</h1>
                     <div class="content-box" id="content-box">
-                        <img id="images" class="text-center">
+                        <h1 id="word" class="text-center"></h1>
                     </div>
                     <div class="col-md-12">
                         @include('includes.player')
                     </div>
-
                 </div>
             </div>
         </div>
@@ -20,7 +19,7 @@
 @endsection
 @stack('script')
 <script>
-    var listImages = @json($images);
+    var listWords = @json($words);
 
     function showMessageInit() {
         var contentBox = document.getElementById("content-box");
@@ -32,21 +31,20 @@
     }
 
     setTimeout (function() {
-        var images = document.getElementById("images");
-        images.src = getRandomImage();
-
+        var words = document.getElementById("word");
+        words.innerHTML = getRandomWord();
 
         showMessageInit();
-    },10000);
+    },5000);
 
     setInterval(function () {
-        var images = document.getElementById("images");
+        var words = document.getElementById("word");
+        words.innerHTML = getRandomWord();
 
-        images.src = getRandomImage();
-    }, 10000);
+    },5000);
 
-    function getRandomImage(){
-        const randomImages = Math.floor(Math.random() * (listImages.length));
-        return listImages[randomImages];
+    function getRandomWord(){
+        const randomWords = Math.floor(Math.random()*(listWords.length));
+        return listWords[randomWords];
     }
 </script>

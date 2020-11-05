@@ -3,30 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\Music;
+use App\Word;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 
-class ImagesController extends Controller
+class TerminationModeController extends Controller
 {
     public function index()
     {
-        return view('imagesMode.content', [
-            "images" => $this->getImage(),
+        return view('terminationMode.content',[
+            "terminations" => $this->getTerminations(),
             'beats' => $this->getAllMusic()
         ]);
     }
 
-    public function getImage()
+    public function getTerminations()
     {
-        $url = "https://picsum.photos/v2/list?page=2&limit=200";
-        $json = file_get_contents($url);
-        $arraydata = json_decode($json);
+        $terminations = Word::all('termination');
 
-        foreach ($arraydata as $data){
-            $array_data[] = $data->download_url;
+        foreach ($terminations as $termination){
+            $array_termination[] = $termination->termination;
         }
 
-        return $array_data;
+        return $array_termination;
     }
 
     public function getMusic($filename)

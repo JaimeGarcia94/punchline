@@ -3,17 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Music;
+use App\Word;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 
-class ImagesController extends Controller
+class RandomModeController extends Controller
 {
     public function index()
     {
-        return view('imagesMode.content', [
+        return view('randomMode.content',[
+            "words" => $this->getWords(),
             "images" => $this->getImage(),
             'beats' => $this->getAllMusic()
         ]);
+    }
+
+    public function getWords()
+    {
+        $words = Word::all('word');
+
+        foreach ($words as $word){
+            $array_word[] = $word->word;
+        }
+
+        return $array_word;
     }
 
     public function getImage()

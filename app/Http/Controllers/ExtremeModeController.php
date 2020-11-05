@@ -3,30 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\Music;
+use App\Word;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 
-class ImagesController extends Controller
+class ExtremeModeController extends Controller
 {
     public function index()
     {
-        return view('imagesMode.content', [
-            "images" => $this->getImage(),
+        return view('extremeMode.content',[
+            "words" => $this->getWords(),
             'beats' => $this->getAllMusic()
         ]);
     }
 
-    public function getImage()
+    public function getWords()
     {
-        $url = "https://picsum.photos/v2/list?page=2&limit=200";
-        $json = file_get_contents($url);
-        $arraydata = json_decode($json);
+        $words = Word::all('word');
 
-        foreach ($arraydata as $data){
-            $array_data[] = $data->download_url;
+        foreach ($words as $word){
+            $array_word[] = $word->word;
         }
 
-        return $array_data;
+        return $array_word;
     }
 
     public function getMusic($filename)
@@ -46,4 +45,5 @@ class ImagesController extends Controller
 
         return $array_beats;
     }
+
 }
