@@ -6,28 +6,15 @@ use App\Music;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 
-class ImagesController extends Controller
+class CrossFireModeController extends Controller
 {
     public function index()
     {
-        return view('imagesMode.content', [
-            "images" => $this->getImage(),
+        return view('crossFireMode.content',[
             'beats' => $this->getAllMusic()
         ]);
     }
 
-    public function getImage()
-    {
-        $url = "https://picsum.photos/v2/list?page=2&limit=200";
-        $json = file_get_contents($url);
-        $arraydata = json_decode($json);
-
-        foreach ($arraydata as $data){
-            $array_data[] = $data->download_url;
-        }
-
-        return $array_data;
-    }
 
     public function getMusic($filename)
     {
