@@ -8,17 +8,26 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="{{ route('contact.sendInfo') }}" enctype="multipart/form-data">
-                    @csrf
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Email:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-success">
+                        <strong>{{ $message }}</strong>
                     </div>
-                    <div class="form-group">
-                        <label for="message-text" class="col-form-label">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
+                @endif
+
+                @if ($message = Session::get('error'))
+                    <div class="alert alert-error">
+                        <strong>{{ $message }}</strong>
                     </div>
-                </form>
+                @endif
+
+                <div class="form">
+                    <form class="sendemail-form" method="POST" action="{{ route('contact.sendInfo') }}">
+                        @csrf
+                        <input type="text" name="subject" placeholder="Subject" required/>
+                        <textarea name="message" placeholder="Message" required></textarea>
+                        <button>Send Email</button>
+                    </form>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

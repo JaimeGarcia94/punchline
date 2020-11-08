@@ -24,17 +24,17 @@ class ContactController extends Controller
                 $mail->isSMTP();                                     	// Set mailer to use SMTP
                 $mail->Host = 'smtp.gmail.com';												// Specify main and backup SMTP servers
                 $mail->SMTPAuth = true;                              	// Enable SMTP authentication
-                $mail->Username = 'your-email@gmail.com';             // SMTP username
-                $mail->Password = 'your-gmail-password';              // SMTP password
+                $mail->Username = 'webpunchline@gmail.com';             // SMTP username
+//                $mail->Password = 'your-gmail-password';              // SMTP password
                 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-                $mail->Port = 587;                                    // TCP port to connect to
+                $mail->Port = 2525;                                    // TCP port to connect to
 
                 //Recipients
-                $mail->setFrom('your-email@gmail.com', 'Mailer');
-                $mail->addAddress('his-her-email@gmail.com', 'Optional name');	// Add a recipient, Name is optional
-                $mail->addReplyTo('your-email@gmail.com', 'Mailer');
-                $mail->addCC('his-her-email@gmail.com');
-                $mail->addBCC('his-her-email@gmail.com');
+                $mail->setFrom('webpunchline@gmail.com', 'Jaime');
+                $mail->addAddress('webpunchline@gmail.com', 'Optional name');	// Add a recipient, Name is optional
+                $mail->addReplyTo('webpunchline@gmail.com', 'Jaime');
+//                $mail->addCC('his-her-email@gmail.com');
+//                $mail->addBCC('his-her-email@gmail.com');
 
                 //Attachments (optional)
                 // $mail->addAttachment('/var/tmp/file.tar.gz');			// Add attachments
