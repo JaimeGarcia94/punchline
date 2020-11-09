@@ -3,6 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//require 'path/to/PHPMailer/src/Exception.php';
+//require 'path/to/PHPMailer/src/PHPMailer.php';
+//require 'path/to/PHPMailer/src/SMTP.php';
+require 'vendor/autoload.php';
 
 class ContactController extends Controller
 {
@@ -12,44 +20,41 @@ class ContactController extends Controller
 //    }
 
     public function sendInfoContact (Request $request) {
-        // is method a POST ?
-        if(Request::isMethod('post')) {
-            require 'vendor/autoload.php';													// load Composer's autoloader
+        $mail = new PHPMailer(true);
 
-            $mail = new PHPMailer(true);                            // Passing `true` enables exceptions
+        try {
+            //Server settings
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+            $mail->isSMTP();                                            // Send using SMTP
+            $mail->Host       = 'localhost';                    // Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+            $mail->Username   = 'webpunchline@gmail.com';                     // SMTP username
+            $mail->Password   = 'Grundig_punchline';                               // SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+            $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
-            try {
-                // Server settings
-                $mail->SMTPDebug = 0;                                	// Enable verbose debug output
-                $mail->isSMTP();                                     	// Set mailer to use SMTP
-                $mail->Host = 'smtp.gmail.com';												// Specify main and backup SMTP servers
-                $mail->SMTPAuth = true;                              	// Enable SMTP authentication
-                $mail->Username = 'webpunchline@gmail.com';             // SMTP username
-//                $mail->Password = 'your-gmail-password';              // SMTP password
-                $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-                $mail->Port = 2525;                                    // TCP port to connect to
+            //Recipients
+            $mail->setFrom('webpunchline@gmail.com', 'Jaime');
+            $mail->addAddress('alba@gmail.com', 'alba');     // Add a recipient
+//            $mail->addAddress('ellen@example.com');               // Name is optional
+//            $mail->addReplyTo('info@example.com', 'Information');
+//            $mail->addCC('cc@example.com');
+//            $mail->addBCC('bcc@example.com');
 
-                //Recipients
-                $mail->setFrom('webpunchline@gmail.com', 'Jaime');
-                $mail->addAddress('webpunchline@gmail.com', 'Optional name');	// Add a recipient, Name is optional
-                $mail->addReplyTo('webpunchline@gmail.com', 'Jaime');
-//                $mail->addCC('his-her-email@gmail.com');
-//                $mail->addBCC('his-her-email@gmail.com');
+            // Attachments
+//            $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+//            $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
-                //Attachments (optional)
-                // $mail->addAttachment('/var/tmp/file.tar.gz');			// Add attachments
-                // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');	// Optional name
+            // Content
+            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->Subject = 'Here is the subject';
+            $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-                //Content
-                $mail->isHTML(true); 																	// Set email format to HTML
-                $mail->Subject = Request::input('subject');
-                $mail->Body    = Request::input('message');						// message
-
-                $mail->send();
-                return back()->with('success','Message has been sent!');
-            } catch (Exception $e) {
-                return back()->with('error','Message could not be sent.');
-            }
+            $mail->send();
+            echo 'Message has been sent';
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
         return view('includes.contact');
     }
