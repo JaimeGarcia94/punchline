@@ -19,16 +19,17 @@ class ContactController extends Controller
             //Server settings
             $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
             $mail->isSMTP();                                            // Send using SMTP
-            $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+            $mail->SMTPSecure = 'ssl';
+            $mail->Host       = env('MAIL_HOST');                    // Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-//            $mail->Username   = 'webpunchline@gmail.com';                     // SMTP username
-//            $mail->Password   = 'Grundig_punchline';                               // SMTP password
+            $mail->Username   = env('MAIL_USERNAME');                     // SMTP username
+            $mail->Password   = env('MAIL_PASSWORD');                               // SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-            $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+            $mail->Port       = env('MAIL_PORT');                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
             //Recipients
             $mail->setFrom('webpunchline@gmail.com', 'Jaime');
-            $mail->addAddress('alba@gmail.com', 'alba');     // Add a recipient
+            $mail->addAddress('webpunchline@gmail.com', 'alba');     // Add a recipient
 //            $mail->addAddress('ellen@example.com');               // Name is optional
 //            $mail->addReplyTo('info@example.com', 'Information');
 //            $mail->addCC('cc@example.com');
@@ -49,6 +50,20 @@ class ContactController extends Controller
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
-        return view('includes.contact');
     }
 }
+
+//$mail = new PHPMailer(); // create a new object
+//$mail->IsSMTP(); // enable SMTP
+//$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+//$mail->SMTPAuth = true; // authentication enabled
+//$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+//$mail->Host = "smtp.gmail.com";
+//$mail->Port = 465; // or 587
+//$mail->IsHTML(true);
+//$mail->Username = "webpunchline@gmail.com";
+//$mail->Password = "Grundig_punchline";
+//$mail->SetFrom("noreply@gmail.com");
+//$mail->Subject = "Test";
+//$mail->Body = "hello";
+//$mail->AddAddress("webpunchline@gmail.com");
