@@ -7,31 +7,75 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                @if ($message = Session::get('success'))
-                    <div class="alert alert-success">
-                        <strong>{{ $message }}</strong>
+            <div class="content-contact-form">
+                @if(session('messageDanger'))
+                    <div class="alert alert-danger">
+                        {{ session('messageDanger') }}
                     </div>
                 @endif
-
-                @if ($message = Session::get('error'))
-                    <div class="alert alert-error">
-                        <strong>{{ $message }}</strong>
+                @if(session('messageSuccess'))
+                    <div class="alert alert-success">
+                        {{ session('messageSuccess') }}
                     </div>
                 @endif
 
                 <div class="form">
-                    <form class="sendemail-form" method="POST" action="{{ route('contact.sendInfo') }}">
+                    <form  method="POST" action="{{ route('contact.sendInfo') }}">
                         @csrf
-                        <input type="text" name="subject" placeholder="Subject" required/>
-                        <textarea name="message" placeholder="Message" required></textarea>
-                        <button>Send Email</button>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                            </div>
+                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ Auth::user()->name }}" required autocomplete="name" autofocus placeholder="Nombre">
+
+                            @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                            </div>
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ Auth::user()->email }}" required autocomplete="email" placeholder="Email">
+
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-pencil"></i>
+                                </span>
+                            </div>
+                            <textarea id="textarea" type="text" class="form-control @error('textarea') is-invalid @enderror" name="textarea" required autocomplete="textarea" autofocus placeholder="Envía tus preguntas"></textarea>
+
+                            @error('textarea')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button class="btn btn-primary">Enviar mensaje</button>
+                        </div>
                     </form>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Enviar mensaje</button>
             </div>
         </div>
     </div>
