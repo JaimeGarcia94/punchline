@@ -8,17 +8,6 @@
                 </button>
             </div>
             <div class="content-contact-form">
-                @if(session('messageDanger'))
-                    <div class="alert alert-danger">
-                        {{ session('messageDanger') }}
-                    </div>
-                @endif
-                @if(session('messageSuccess'))
-                    <div class="alert alert-success">
-                        {{ session('messageSuccess') }}
-                    </div>
-                @endif
-
                 <div class="form">
                     <form  method="POST" action="{{ route('contact.sendInfo') }}">
                         @csrf
@@ -36,8 +25,6 @@
                             </span>
                             @enderror
                         </div>
-
-
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                     <span class="input-group-text">
@@ -53,15 +40,13 @@
                             @enderror
 
                         </div>
-
-
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
                                     <i class="fa fa-pencil"></i>
                                 </span>
                             </div>
-                            <textarea id="textarea" type="text" class="form-control @error('textarea') is-invalid @enderror" name="textarea" required autocomplete="textarea" autofocus placeholder="Envía tus preguntas"></textarea>
+                            <textarea id="textarea" type="text" class="form-control @error('textarea') is-invalid @enderror" name="textarea" value="" required autocomplete="textarea" autofocus placeholder="Envía tus preguntas"></textarea>
 
                             @error('textarea')
                             <span class="invalid-feedback" role="alert">
@@ -69,7 +54,6 @@
                             </span>
                             @enderror
                         </div>
-
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                             <button class="btn btn-primary">Enviar mensaje</button>

@@ -11,6 +11,10 @@ require __DIR__ . '/../../../vendor/autoload.php';
 
 class ContactController extends Controller
 {
+    public function confirmEmailContact()
+    {
+        return view('includes.confirmEmailContact');
+    }
 
     public function sendInfoContact (Request $request)
     {
@@ -31,7 +35,7 @@ class ContactController extends Controller
 
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+//            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
             $mail->isSMTP();                                            // Send using SMTP
             $mail->SMTPSecure = env('MAIL_ENCRYPTION');
             $mail->Host       = env('MAIL_HOST');                    // Set the SMTP server to send through
@@ -59,9 +63,9 @@ class ContactController extends Controller
 //            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
-            return view('contact')->with(['messageSuccess' => 'EL email se ha enviado correctamente ']);
+            return redirect()->route('confirmEmailContact')->with(['messageSuccess' => 'El email se ha enviado correctamente ']);
         } catch (Exception $e) {
-            return view('contact')->with(['messageDanger' => 'EL email no se ha enviado correctamente ']);
+            return redirect()->route('confirmEmailContact')->with(['messageDanger' => 'El email no se ha enviado correctamente ']);
         }
     }
 }

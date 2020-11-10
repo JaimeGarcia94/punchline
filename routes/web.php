@@ -35,7 +35,7 @@ Route::post('/config/update/email', 'ConfigController@updateEmail')->name('confi
 Route::post('/config/update/password', 'ConfigController@updatePassword')->name('config.updatePassword');
 
 //route contact
-//Route::get('/contact', 'ContactController@contact')->name('contact');
+Route::get('/contact', 'ContactController@confirmEmailContact')->name('confirmEmailContact');
 Route::post('/contact/send/info', 'ContactController@sendInfoContact')->name('contact.sendInfo');
 
 //route page music beats
