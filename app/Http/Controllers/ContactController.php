@@ -48,7 +48,7 @@ class ContactController extends Controller
             $mail->addReplyTo($email, $subject);
 
             // Content
-            $mail->isHTML(true);                                 
+            $mail->isHTML(true);
             $mail->Subject = $subject.' - pregunta: ';
             $mail->Body    = $textarea;
 
