@@ -139,13 +139,6 @@
                         </a>
                         @include('includes.contact')
                     </div>
-{{--                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">--}}
-{{--                        <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>--}}
-{{--                        <p>--}}
-{{--                            <i class="fa fa-home mr-3"></i> Valencia, ES</p>--}}
-{{--                        <p>--}}
-{{--                            <i class="fa fa-envelope mr-3"></i> punchline@gmail.com</p>--}}
-{{--                    </div>--}}
                 </div>
 
                 <hr>
