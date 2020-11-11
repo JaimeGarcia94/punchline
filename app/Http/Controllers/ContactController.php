@@ -34,36 +34,26 @@ class ContactController extends Controller
         $mail = new PHPMailer(true);
 
         try {
-            //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
-            $mail->isSMTP();                                            // Send using SMTP
+            $mail->isSMTP();
             $mail->SMTPSecure = env('MAIL_ENCRYPTION');
-            $mail->Host       = env('MAIL_HOST');                    // Set the SMTP server to send through
-            $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-            $mail->Username   = env('MAIL_USERNAME');                     // SMTP username
-            $mail->Password   = env('MAIL_PASSWORD');                               // SMTP password
-            $mail->Port       = env('MAIL_PORT');                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+            $mail->Host       = env('MAIL_HOST');
+            $mail->SMTPAuth   = true;
+            $mail->Username   = env('MAIL_USERNAME');
+            $mail->Password   = env('MAIL_PASSWORD');
+            $mail->Port       = env('MAIL_PORT');
 
             //Recipients
             $mail->setFrom($email, $subject);
-            $mail->addAddress(env('MAIL_FROM_ADDRESS'));     // Add a recipient
-//            $mail->addAddress('ellen@example.com');               // Name is optional
+            $mail->addAddress(env('MAIL_FROM_ADDRESS'));
             $mail->addReplyTo($email, $subject);
-//            $mail->addCC($email);
-//            $mail->addBCC('bcc@example.com');
-
-            // Attachments
-//            $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//            $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
             // Content
-            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->isHTML(true);                                 
             $mail->Subject = $subject.' - pregunta: ';
             $mail->Body    = $textarea;
-//            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
-//            return redirect()->route('confirmEmailContact')->with(['messageSuccess' => 'El email se ha enviado correctamente ']);
+            return redirect()->route('confirmEmailContact')->with(['messageSuccess' => 'El email se ha enviado correctamente ']);
         } catch (Exception $e) {
             return redirect()->route('confirmEmailContact')->with(['messageDanger' => 'El email no se ha enviado correctamente ']);
         }
