@@ -59,25 +59,25 @@
                             @csrf
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-lock"></i>
-                                </span>
+                                    <span class="input-group-text">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
                                 </div>
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Nueva contraseña">
 
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
 
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-lock"></i>
-                                </span>
+                                    <span class="input-group-text">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
                                 </div>
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirma la nueva contraseña">
 
