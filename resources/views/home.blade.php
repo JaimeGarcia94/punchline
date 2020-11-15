@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="box-game">
+                <div class="box-games">
                     <h1 class="title">Selecciona el modo de juego</h1>
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">

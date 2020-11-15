@@ -5,8 +5,18 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="box-game">
-                    <h1 class="title">Easy Mode</h1>
-                    <div class="content-box" id="content-box">
+
+                    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+                        <div class="container">
+                            <span class="title-game">Easy Mode</span>
+{{--                            <button onclick="returnBack()" class="fa fa-sign-out"></button>--}}
+                            <button onclick="returnBack()" id="buttonBack">
+                                <i class="fa fa-sign-out fa-2x"></i>
+                            </button>
+                        </div>
+                    </nav>
+
+                    <div class="content-box content-box-fixed" id="content-box">
                         <h1 id="word" class="text-center"></h1>
                     </div>
                     <div class="col-md-12">
@@ -46,5 +56,10 @@
     function getRandomWord(){
         const randomWords = Math.floor(Math.random()*(listWords.length));
         return listWords[randomWords];
+    }
+
+    function returnBack()
+    {
+        window.location = "http://localhost:8080/home";
     }
 </script>

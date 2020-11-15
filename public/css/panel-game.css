@@ -1,14 +1,13 @@
 .box-game{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     text-align: center;
-    padding: 50px 50px 50px 50px;
+    /*padding: 50px 50px 50px 50px;*/
     border: 0;
     color: #666;
 }
 
-.title{
-    text-align: center;
-    margin-bottom: 50px;
+.title-game{
+    font-size: 1.125rem;
 }
 
 #images{
@@ -22,13 +21,22 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    height: 300px;
+    height: 440px;
+}
+
+.content-box-fixed{
+    height: 440px;
+}
+
+#word{
+    padding: 215px 0 0 0;
 }
 
 .content-player{
     margin-top: 30px;
     width: 100%;
     text-align: center;
+    padding: 0 0 15px 0;
 }
 
 .content-player #select{
@@ -45,6 +53,26 @@
     border-radius: .25rem;
     transition: ease-in-out;
 
+}
+
+#buttonBack{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+#buttonBack:hover{
+    background: none;
+    color: black;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
 #buttonAudio{
