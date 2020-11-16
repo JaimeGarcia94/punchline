@@ -20,7 +20,10 @@
 
 {{--                            <div class="container">--}}
                                 <div id="paralelograma" class="shape">
-                                    <h1 id="word" class="text-center"></h1>
+                                    <div class="font-word">
+                                        <h1 id="word" class="text-center"></h1>
+                                    </div>
+
                                 </div>
 {{--                            </div>--}}
 
