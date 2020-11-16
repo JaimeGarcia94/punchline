@@ -17,7 +17,16 @@
 
                     <div class="content-box content-box-fixed" id="content-box">
                         <div class="content-box-body">
-                            <h1 id="word" class="text-center"></h1>
+
+{{--                            <div class="container">--}}
+                                <div id="paralelograma" class="shape">
+                                    <h1 id="word" class="text-center"></h1>
+                                </div>
+{{--                            </div>--}}
+
+
+
+
                         </div>
                     </div>
                     <div class="col-md-12">
