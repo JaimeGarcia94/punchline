@@ -28,8 +28,14 @@
     height: 440px;
 }
 
+.content-box-body{
+    padding: 237px 50px 80px 50px;
+}
+
 #word{
-    padding: 215px 0 0 0;
+    border: 1px solid green;
+    margin: auto;
+    width: 50%;
 }
 
 .content-player{

@@ -9,7 +9,6 @@
                     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                         <div class="container">
                             <span class="title-game">Easy Mode</span>
-{{--                            <button onclick="returnBack()" class="fa fa-sign-out"></button>--}}
                             <button onclick="returnBack()" id="buttonBack">
                                 <i class="fa fa-sign-out fa-2x"></i>
                             </button>
@@ -17,7 +16,9 @@
                     </nav>
 
                     <div class="content-box content-box-fixed" id="content-box">
-                        <h1 id="word" class="text-center"></h1>
+                        <div class="content-box-body">
+                            <h1 id="word" class="text-center"></h1>
+                        </div>
                     </div>
                     <div class="col-md-12">
                         @include('includes.player')
