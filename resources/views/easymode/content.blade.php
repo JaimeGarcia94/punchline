@@ -24,9 +24,9 @@
                             </div>
                             <div id="paralelograma" class="shape">
 
-                                <span class="span-paralelograma">Easy Mode | Pal. 10S</span>
-                            </div>
 
+                            </div>
+                            <span class="span-paralelograma">Easy Mode | Pal. 10S</span>
 
                             </div>
                         </div>
