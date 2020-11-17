@@ -19,14 +19,15 @@
                         <div class="content-box-body">
 
 {{--                            <div class="container">--}}
-                                <div id="paralelograma" class="shape">
-                                    <div class="font-word">
-                                        <h1 id="word" class="text-center"></h1>
-                                    </div>
+{{--                                <div id="paralelograma" class="shape">--}}
 
-                                </div>
+
+{{--                                </div>--}}
 {{--                            </div>--}}
 
+                            <div class="font-word">
+                                <h1 id="word" class="text-center"></h1>
+                            </div>
 
 
 

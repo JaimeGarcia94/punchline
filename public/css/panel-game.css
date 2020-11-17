@@ -47,9 +47,17 @@
 
 
 #word{
-    border: 1px solid green;
-    margin: auto;
     width: 50%;
+    height: 120px;
+    border-radius: 140px;
+    background: black;
+    text-align: center;
+    line-height: 120px;
+    font-size: 4em;
+    color: white;
+    text-shadow: 0 2px 2px #000;
+    font-weight: bold;
+    margin: auto;
 }
 
 .content-player{
