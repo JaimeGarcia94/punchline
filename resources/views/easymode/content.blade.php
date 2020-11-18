@@ -17,20 +17,13 @@
 
                     <div class="content-box content-box-fixed" id="content-box">
                         <div class="content-box-body">
-
-
-                            <div class="font-word">
-                                <h1 id="word" class="text-center"></h1>
-                            </div>
-                            <div id="paralelograma" class="shape">
-
-
-                            </div>
-                            <span class="span-paralelograma">Easy Mode | Pal. 10S</span>
-
-                            </div>
+                            <h1 id="word" class="text-center"></h1>
                         </div>
-                        <div class="col-md-12">
+                        <div>
+                            <span class="title-game-span">Easy Mode | Pal. 10S</span>
+                        </div>
+                    </div>
+                        <div class="col-md-12 content-box-player">
                             @include('includes.player')
                         </div>
                     </div>

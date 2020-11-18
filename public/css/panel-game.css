@@ -21,52 +21,52 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    height: 440px;
+    height: 454px;
 }
 
 .content-box-fixed{
-    height: 440px;
+    background: #0e0a1d;
+    height: 454px;
 }
 
 .content-box-body{
-    padding: 128px 50px 80px 50px;
-}
-
-.shape{
-    background: #63639c;
-    margin: auto;
-}
-#paralelograma {
-    width: 519px;
-    height: 63px;
-    -moz-transform: skew(20deg);
-    background: #63639c;
-}
-
-.span-paralelograma{
-    color: white;
-    line-height: 60px;
+    padding: 128px 50px 14px 50px;
 }
 
 
 #word{
     width: 50%;
     height: 120px;
-    border-radius: 140px;
-    background: black;
+    background: #FFFFFF;
     line-height: 120px;
     font-size: 4em;
-    color: white;
+    color: #0e0a1d;
     text-shadow: 0 2px 2px #000;
-    font-weight: bold;
+    /*font-weight: bold;*/
     margin: auto;
+    text-transform: uppercase;
+}
+
+.title-game-span{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 715px) {
+    #word {
+        width: 100%;
+    }
 }
 
 .content-player{
-    margin-top: 30px;
     width: 100%;
     text-align: center;
-    padding: 0 0 15px 0;
+    padding: 0 0 30px 0;
+}
+
+.content-box-player{
+    background: #0e0a1d;
 }
 
 .content-player #select{
@@ -107,7 +107,7 @@
 
 #buttonAudio{
     background: none;
-    color: inherit;
+    color: #FFFFFF;
     border: none;
     padding: 0;
     font: inherit;
@@ -116,12 +116,12 @@
     vertical-align: middle;
 }
 
-#buttonAudio:hover{
-    background: none;
-    color: black;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-}
+/*#buttonAudio:hover{*/
+/*    background: none;*/
+/*    color: black;*/
+/*    border: none;*/
+/*    padding: 0;*/
+/*    font: inherit;*/
+/*    cursor: pointer;*/
+/*    outline: inherit;*/
+/*}*/
