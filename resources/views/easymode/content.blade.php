@@ -19,17 +19,17 @@
                         <div class="content-box-body">
                             <h1 id="word" class="text-center"></h1>
                         </div>
-                        <div>
+                        <div class="span-info-game" id="span-info-game">
                             <span class="title-game-span">Easy Mode | Pal. 10S</span>
                         </div>
                     </div>
-                        <div class="col-md-12 content-box-player">
-                            @include('includes.player')
-                        </div>
+                    <div class="col-md-12 content-box-player">
+                        @include('includes.player')
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     @endsection
     @stack('script')
     <script>
@@ -37,10 +37,13 @@
 
         function showMessageInit() {
             var contentBox = document.getElementById("content-box");
-            if (contentBox.style.visibility === "hidden") {
+            var spanInfoGame = document.getElementById("span-info-game");
+            if (contentBox.style.visibility === "hidden" && spanInfoGame.style.visibility === "hidden") {
                 contentBox.style.display = "block";
+                spanInfoGame.style.display = "block";
             } else {
                 document.getElementsByClassName("content-box")[0].removeAttribute("id");
+                document.getElementsByClassName("span-info-game")[0].removeAttribute("id");
             }
         }
 
