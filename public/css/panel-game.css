@@ -1,7 +1,6 @@
 .box-game{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     text-align: center;
-    /*padding: 50px 50px 50px 50px;*/
     border: 0;
     color: #666;
 }
@@ -16,7 +15,7 @@
     max-width: 100%;
 }
 
-#content-box{
+#content-box-hidden{
     background-image: url("../images/Spinner-1.3s-200px.gif");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -33,24 +32,6 @@
     padding: 128px 50px 14px 50px;
 }
 
-/*#word{*/
-/*    visibility: hidden;*/
-/*}*/
-
-/*.word{*/
-
-/*    width: 50%;*/
-/*    height: 120px;*/
-/*    background: #FFFFFF;*/
-/*    line-height: 120px;*/
-/*    font-size: 4em;*/
-/*    color: #0e0a1d;*/
-/*    text-shadow: 0 2px 2px #000;*/
-/*    margin: auto;*/
-/*    text-transform: uppercase;*/
-/*}*/
-
-
 #word{
     width: 50%;
     height: 120px;
@@ -63,7 +44,7 @@
     text-transform: uppercase;
 }
 
-.word{
+.word-hidden{
     visibility: hidden;
 }
 
@@ -79,7 +60,7 @@
     font-size: 1.5rem;
 }
 
-#span-info-game{
+#span-info-game-hidden{
     visibility: hidden;
 }
 
@@ -139,13 +120,3 @@
     outline: inherit;
     vertical-align: middle;
 }
-
-/*#buttonAudio:hover{*/
-/*    background: none;*/
-/*    color: black;*/
-/*    border: none;*/
-/*    padding: 0;*/
-/*    font: inherit;*/
-/*    cursor: pointer;*/
-/*    outline: inherit;*/
-/*}*/

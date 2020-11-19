@@ -15,11 +15,11 @@
                         </div>
                     </nav>
 
-                    <div class="content-box content-box-fixed" id="content-box">
+                    <div class="content-box content-box-fixed" id="content-box-hidden">
                         <div class="content-box-body">
-                            <h1 id="word" class="text-center"></h1>
+                            <h1 id="word" class="text-center word-hidden"></h1>
                         </div>
-                        <div class="span-info-game" id="span-info-game">
+                        <div class="span-info-game" id="span-info-game-hidden">
                             <span class="title-game-span">Easy Mode | Pal. 10S</span>
                         </div>
                     </div>
@@ -36,14 +36,17 @@
         var listWords = @json($words);
 
         function showMessageInit() {
-            var contentBox = document.getElementById("content-box");
-            var spanInfoGame = document.getElementById("span-info-game");
-            if (contentBox.style.visibility === "hidden" && spanInfoGame.style.visibility === "hidden") {
+            var contentBox = document.getElementById("content-box-hidden");
+            var spanInfoGame = document.getElementById("span-info-game-hidden");
+            var backgroundWord = document.getElementById("word");
+            if (contentBox.style.visibility === "hidden" && spanInfoGame.style.visibility === "hidden" && backgroundWord.style.visibility === "hidden") {
                 contentBox.style.display = "block";
                 spanInfoGame.style.display = "block";
+                backgroundWord.style.display = "block";
             } else {
                 document.getElementsByClassName("content-box")[0].removeAttribute("id");
                 document.getElementsByClassName("span-info-game")[0].removeAttribute("id");
+                backgroundWord.classList.remove("word-hidden");
             }
         }
 
