@@ -67,4 +67,9 @@
         const randomWords = Math.floor(Math.random()*(listWords.length));
         return listWords[randomWords];
     }
+
+    function returnBack()
+    {
+        window.location = "http://localhost:8080/home";
+    }
 </script>
