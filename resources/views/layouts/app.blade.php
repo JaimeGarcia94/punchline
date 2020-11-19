@@ -103,10 +103,10 @@
             <div class="container text-center text-md-left">
                 <div class="row text-center text-md-left mt-3 pb-3">
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                        <a href="#" class="text-uppercase mb-4 font-weight-bold modal-cookies" data-toggle="modal" data-target="#modalContactForm">
+                        <a href="#" class="text-uppercase mb-4 font-weight-bold modal-cookies" data-toggle="modal" data-target="#condition">
                             Términos y condiciones
                         </a>
-                        <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal fade" id="condition" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content modal-box">
                                     @include('includes.condition')
@@ -119,27 +119,25 @@
                     <hr class="w-100 clearfix d-md-none">
 
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <a href="#" class="text-uppercase mb-4 font-weight-bold modal-legal" data-toggle="modal" data-target="#myModal">
+                        <a href="#" class="text-uppercase mb-4 font-weight-bold modal-legal" data-toggle="modal" data-target="#legal">
                             Bases legales
                         </a>
-                        <div class="modal fade" id="myModal">
+                        <div class="modal fade" id="legal">
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content modal-box">
                                     @include('includes.legal')
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <hr class="w-100 clearfix d-md-none">
 
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
-                        <p>
-                            <i class="fa fa-home mr-3"></i> Valencia, ES</p>
-                        <p>
-                            <i class="fa fa-envelope mr-3"></i> punchline@gmail.com</p>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <a href="#" class="text-uppercase mb-4 font-weight-bold modal-legal" data-toggle="modal" data-target="#contact">
+                            Contacto
+                        </a>
+                        @include('includes.contact')
                     </div>
                 </div>
 

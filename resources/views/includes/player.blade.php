@@ -10,7 +10,7 @@
             <option value="{{$beat}}" onclick="deleteRouteBeat()">{{$beat}}</option>
         @endforeach
     </select>
-    <button onclick="playAudio()" id="buttonAudio" type="button">
+    <button onclick="playAudio()" id="buttonAudio">
         <i class = "fa fa-play-circle-o fa-4x"></i>
     </button>
 </div>
