@@ -48,6 +48,22 @@
     visibility: hidden;
 }
 
+#termination{
+    width: 50%;
+    height: 120px;
+    background: #FFFFFF;
+    line-height: 120px;
+    font-size: 4em;
+    color: #0e0a1d;
+    text-shadow: 0 2px 2px #000;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+.termination-hidden{
+    visibility: hidden;
+}
+
 @media (max-width: 715px) {
     #word {
         width: 100%;
