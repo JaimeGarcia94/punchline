@@ -19,9 +19,6 @@
                     <div class="content-box-body">
                         @include('includes.countdown')
                     </div>
-                    <div class="span-info-game" id="span-info-game-hidden">
-                        <span class="title-game-span">4X4 | 120S</span>
-                    </div>
                 </div>
                 <div class="col-md-12 content-box-player">
                     @include('includes.player')
