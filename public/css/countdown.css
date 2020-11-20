@@ -4,18 +4,29 @@
     margin: auto;
 }
 
+.start-time{
+    background: #F1E125;
+    color: #0e0a1d;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.start-time:hover{
+    background: #f1ce08;
+}
+
 #inner-circle {
     border: 10px solid #ECEBFA;
-    border-left-color:#746EBB;
-    border-right-color:#746EBB;
+    border-left-color: rgba(241, 225, 37, 0.99);
+    border-right-color: rgba(241, 225, 37, 0.99);
 
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     transform: rotate(360deg);
 
-    background: -webkit-linear-gradient(top, #ecebfa 48%, #746EBB 49%, #746EBB 51%, #ECEBFA 52%);
-    background: -moz-linear-gradient(top, #ecebfa 48%, #746EBB 49%, #746EBB 51%, #ECEBFA 52%);
-    background: linear-gradient(to bottom, #ecebfa 48%, #746EBB 49%, #746EBB 51%, #ECEBFA 52%);
+    background: -webkit-linear-gradient(top, #ecebfa 48%, #F1E125 49%, #F1E125 51%, #ECEBFA 52%);
+    background: -moz-linear-gradient(top, #ecebfa 48%, #F1E125 49%, #F1E125 51%, #ECEBFA 52%);
+    background: linear-gradient(to bottom, #ecebfa 48%, #F1E125 49%, #F1E125 51%, #ECEBFA 52%);
 
     margin: 27px auto auto auto;
     width: 180px;
@@ -31,7 +42,7 @@
 }
 
 #center-circle {
-    border: 10px solid #746EBB;
+    border: 10px solid #F1E125;
     border-bottom-color:#ECEBFA;
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -61,11 +72,11 @@
     -webkit-border-radius: 140px;
     -moz-border-radius: 140px;
     border-radius: 140px;
-    background: #2E2A69;
+    background: #f1ce08;
     text-align:center;
     line-height: 120px;
     font-size: 4em;
-    color:#746EBB;
+    color:#0e0a1d;
     text-shadow: 0 2px 2px #000;
     font-weight:bold;
     margin: -130px auto auto 90px;

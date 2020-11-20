@@ -6,7 +6,7 @@
     </div>
 </div>
 
-<button onclick="clickCountDown()" id="text-button">Empieza el tiempo</button>
+<button class="btn start-time" onclick="clickCountDown()" id="text-button">Empieza el tiempo</button>
 
 @push('countdown')
 <script>
@@ -23,6 +23,11 @@
                 document.getElementById("text-button").innerHTML = "Empieza el tiempo";
             }
         },1000);
+    }
+
+    function returnBack()
+    {
+        window.location = "http://localhost:8080/home";
     }
 </script>
 @endpush
