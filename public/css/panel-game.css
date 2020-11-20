@@ -9,12 +9,6 @@
     font-size: 1.125rem;
 }
 
-#images{
-    width: 400px;
-    /*height: 300px;*/
-    max-width: 100%;
-}
-
 #content-box-hidden{
     background-image: url("../images/Spinner-1.3s-200px.gif");
     background-repeat: no-repeat;
@@ -78,6 +72,15 @@
 }
 
 .history-hidden{
+    visibility: hidden;
+}
+
+#images{
+    width: 400px;
+    max-width: 100%;
+}
+
+.image-hidden{
     visibility: hidden;
 }
 
