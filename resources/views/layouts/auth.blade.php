@@ -24,16 +24,16 @@
 
 </head>
 <body class="hold-transition login-page">
-<div class="login-box">
-    <div class="login-logo">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6" style="border:1px solid red">
+            <p>hola</p>
+        </div>
 
+        <div class="col-sm-12 col-md-6 login-box-body">
+            @yield('content')
+        </div>
     </div>
-
-    <div class="login-box-body">
-
-        @yield('content')
-    </div>
-    
 </div>
 </body>
 </html>

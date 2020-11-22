@@ -24,13 +24,16 @@
 
 </head>
 <body class="hold-transition register-page">
-<div class="register-box">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6" style="border:1px solid red">
+            <p>hola</p>
+        </div>
 
-    <div class="register-box-body">
-
-        @yield('content')
+        <div class="col-sm-12 col-md-6 register-box-body">
+            @yield('content')
+        </div>
     </div>
-
 </div>
 </body>
 </html>
