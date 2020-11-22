@@ -8,10 +8,9 @@
     justify-content: center;
 }
 
-/*.login-box{*/
-/*    width: 460px;*/
-/*    margin: 7% auto;*/
-/*}*/
+.logo-box{
+    padding: 80px 50px 80px 50px;
+}
 
 .login-box-body{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;

@@ -26,8 +26,17 @@
 <body class="hold-transition login-page">
 <div class="container">
     <div class="row">
-        <div class="col-sm-12 col-md-6" style="border:1px solid red">
-            <p>hola</p>
+        <div class="col-sm-12 col-md-6 logo-box" style="border:1px solid red">
+            <div class="col-12 text-center" style="border:1px solid green">
+                logo
+            </div>
+            <div class="12" style="border:1px solid pink">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto commodi culpa, cumque deserunt
+                    dolorum eligendi eos exercitationem
+                    inventore ipsum libero maxime molestiae officiis quia quidem quos reiciendis vel vero.
+                </p>
+            </div>
+
         </div>
 
         <div class="col-sm-12 col-md-6 login-box-body">
