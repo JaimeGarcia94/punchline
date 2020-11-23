@@ -10,10 +10,9 @@
     justify-content: center;
 }
 
-/*.register-box{*/
-/*    width: 500px;*/
-/*    margin: 7% auto;*/
-/*}*/
+.logo-box{
+    padding: 80px 50px 80px 50px;
+}
 
 .register-box-body{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
