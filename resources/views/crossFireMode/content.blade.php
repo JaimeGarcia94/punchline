@@ -15,7 +15,7 @@
                 </nav>
 
                 <div class="content-box-fixed">
-                    <div class="content-box-body">
+                    <div class="content-box-body-countdown">
                         @include('includes.countdown')
                     </div>
                 </div>

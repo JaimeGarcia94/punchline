@@ -1,68 +1,21 @@
 #main {
     max-width: 300px;
-    height: 240px;
     margin: auto;
 }
 
+.content-box-body-countdown{
+    padding: 300px 50px 14px 50px;
+}
+
 .start-time{
-    background: #F1E125;
-    color: #0e0a1d;
+    background: #F9B25C;
+    color: #202020;
     font-weight: bold;
     font-size: 1rem;
 }
 
 .start-time:hover{
-    background: #f1ce08;
-}
-
-#inner-circle {
-    border: 10px solid #ECEBFA;
-    border-left-color: rgba(241, 225, 37, 0.99);
-    border-right-color: rgba(241, 225, 37, 0.99);
-
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    transform: rotate(360deg);
-
-    background: -webkit-linear-gradient(top, #ecebfa 48%, #F1E125 49%, #F1E125 51%, #ECEBFA 52%);
-    background: -moz-linear-gradient(top, #ecebfa 48%, #F1E125 49%, #F1E125 51%, #ECEBFA 52%);
-    background: linear-gradient(to bottom, #ecebfa 48%, #F1E125 49%, #F1E125 51%, #ECEBFA 52%);
-
-    margin: 27px auto auto auto;
-    width: 180px;
-    height: 180px;
-
-    -webkit-border-radius: 180px;
-    -moz-border-radius: 180px;
-    border-radius: 180px;
-
-    -webkit-animation:turning_acw 3s infinite;
-    -moz-animation:turning_acw 3s infinite;
-    animation:turning_acw 3s infinite;
-}
-
-#center-circle {
-    border: 10px solid #F1E125;
-    border-bottom-color:#ECEBFA;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    transform: rotate(360deg);
-
-    background: -webkit-linear-gradient(top, #fff 48%, #ECEBFA 49%, #ECEBFA 51%, #fff 52%);
-    background: -moz-linear-gradient(top, #fff 48%, #ECEBFA 49%, #ECEBFA 51%, #fff 52%);
-    background: linear-gradient(to bottom, #fff 48%, #ECEBFA 49%, #ECEBFA 51%, #fff 52%);
-
-    margin: -160px auto auto auto;
-    width: 140px;
-    height: 140px;
-
-    -webkit-border-radius: 140px;
-    -moz-border-radius: 140px;
-    border-radius: 140px;
-
-    -webkit-animation:turning_cw 5s infinite;
-    -moz-animation:turning_cw 5s infinite;
-    animation:turning_cw 5s infinite;
+    background: #F9B25C;
 }
 
 #countdown {
@@ -72,20 +25,14 @@
     -webkit-border-radius: 140px;
     -moz-border-radius: 140px;
     border-radius: 140px;
-    background: #f1ce08;
+    background: #F9B25C;
     text-align:center;
     line-height: 120px;
     font-size: 4em;
-    color:#0e0a1d;
-    text-shadow: 0 2px 2px #000;
+    color: #202020;
+    text-shadow: 0 2px 2px #202020;
     font-weight:bold;
     margin: -130px auto auto 90px;
-}
-
-@media (max-width: 375px) {
-    #countdown {
-        margin: -130px auto auto 63px;
-    }
 }
 
 @-webkit-keyframes aura {

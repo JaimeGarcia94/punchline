@@ -14,9 +14,11 @@
                     </div>
                 </nav>
 
-                <div class="content-box content-box-fixed" id="content-box-hidden">
-                    <div class="content-box-body">
-                        <img id="images" class="text-center image-hidden">
+                <div class="container content-box content-box-fixed" id="content-box-hidden">
+                    <div class="row content-box-body">
+                        <div class="col-12">
+                            <img id="images" class="text-center image-hidden">
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-12 content-box-player">

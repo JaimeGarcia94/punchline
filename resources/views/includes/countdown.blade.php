@@ -1,6 +1,4 @@
 <div id="main">
-    <div id="inner-circle"></div>
-    <div id="center-circle"></div>
     <div id="countdown">
         <span id="content-time">120</span>
     </div>
