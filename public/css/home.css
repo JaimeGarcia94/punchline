@@ -4,12 +4,12 @@
 }
 
 .box-games{
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
-    text-align: center;
-    /*background-color: #FFF;*/
-    padding: 50px 50px 50px 50px;
-    border: 0;
-    color: #666;
+    /*box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;*/
+    /*text-align: center;*/
+    /*!*background-color: #FFF;*!*/
+    /*padding: 50px 50px 50px 50px;*/
+    /*border: 0;*/
+    /*color: #666;*/
 }
 
 .row{
