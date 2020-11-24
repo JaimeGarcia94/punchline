@@ -51,7 +51,7 @@
             </div>
 
             <div class="col-xs-12">
-                <button type="submit" class="btn btn-block btn-flat btn-primary">
+                <button type="submit" class="btn btn-block btn-flat btn-submit">
                     {{ __('Login') }}
                 </button>
             </div>
@@ -66,7 +66,7 @@
         @endif
     </div>
 
-    <div class="text-center">
+    <div class="link-register text-center">
         @if (Route::has('register'))
 
                 <a class="btn btn-link" href="{{ route('register') }}">{{ __('Register') }}</a>
