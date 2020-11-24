@@ -97,8 +97,8 @@
 
         <div class="col-xs-12">
 
-                <button type="submit" class="btn btn-block btn-flat btn-primary">
-                    {{ __('Register') }}
+                <button type="submit" class="btn btn-block btn-flat btn-submit">
+                    {{ __('Registrate') }}
                 </button>
 
         </div>
