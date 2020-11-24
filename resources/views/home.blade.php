@@ -1,6 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.homeLayout')
 
 @section('content')
+
+    <div class="image-home">
+        logo
+    </div>
+
+
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
