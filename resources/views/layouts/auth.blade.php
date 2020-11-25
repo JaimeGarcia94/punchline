@@ -30,7 +30,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-6 logo-and-description-box">
             <div class="col-12 text-center">
-                <img src="../images/punchline_small.png" alt="logo-punchline">
+                <img src="../images/punchline_small.png" class="image-logo" alt="logo-punchline">
             </div>
             <div class="col-12 description">
                 <p>

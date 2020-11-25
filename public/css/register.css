@@ -12,7 +12,7 @@
     justify-content: center;
 }
 
-.logo-box{
+.logo-and-description-box{
     padding: 23px 50px 80px 50px;
     color: white;
     background-color: #202020;
@@ -68,4 +68,20 @@
     margin-bottom: 14px;
     background-color: #f9a83e;
     border-color: #f9a83e;
+}
+
+@media (max-width: 992px) {
+    .image-logo{
+        width: 250px;
+    }
+}
+
+@media (max-width: 525px) {
+    .image-logo{
+        width: 200px;
+    }
+
+    .logo-and-description-box{
+        padding: 218px 50px 80px 50px;
+    }
 }
