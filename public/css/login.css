@@ -35,6 +35,11 @@
     margin-top: 1rem !important;
     font-size: 2.5rem;
     color: #FFFFFF;
+    font-family: 'Anton', sans-serif;
+}
+
+.description p{
+    font-family: 'Roboto', sans-serif;
 }
 
 #span-password {
@@ -59,6 +64,7 @@
     margin-bottom: 14px;
     background-color: #F9B25C;
     border-color: #F9B25C;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-submit:hover {
@@ -71,10 +77,12 @@
 .icheck {
     margin: 0 144px 21px 0;
     padding-left: 1.25rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .link-forgot-password a{
     color: #F9B25C;
+    font-family: 'Roboto', sans-serif;
 }
 
 .link-forgot-password a:hover{
@@ -84,6 +92,7 @@
 
 .link-register a{
     color: #F9B25C;
+    font-family: 'Roboto', sans-serif;
 }
 
 .link-register a:hover{

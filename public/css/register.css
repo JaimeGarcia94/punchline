@@ -34,7 +34,13 @@
     margin-top: 1rem !important;
     font-size: 2.5rem;
     color: #FFFFFF;
+    font-family: 'Anton', sans-serif;
 }
+
+.description p{
+    font-family: 'Roboto', sans-serif;
+}
+
 
 .form-group {
     display: flex;
@@ -54,6 +60,7 @@
     margin-bottom: 14px;
     background-color: #F9B25C;
     border-color: #F9B25C;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-submit:hover {

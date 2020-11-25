@@ -16,7 +16,8 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -30,10 +31,9 @@
             <div class="col-12 text-center">
                 <img src="../images/punchline_small.png" alt="logo-punchline">
             </div>
-            <div class="col-12">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto commodi culpa, cumque deserunt
-                    dolorum eligendi eos exercitationem
-                    inventore ipsum libero maxime molestiae officiis quia quidem quos reiciendis vel vero.
+            <div class="col-12 description">
+                <p>
+                    Rellena el formulario de registro para poder entrenar con la modalidades.
                 </p>
             </div>
 

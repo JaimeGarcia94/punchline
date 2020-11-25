@@ -1,4 +1,4 @@
-@extends('layouts.register')
+@extends('layouts.forgotEmailLayout')
 
 @section('content')
 <div class="card-body">

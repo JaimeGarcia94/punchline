@@ -16,32 +16,30 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
 
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition register-page">
 <div class="container">
     <div class="row">
-        <div class="col-sm-12 col-md-6 logo-and-description-box">
+        <div class="col-sm-12 col-md-6 logo-box">
             <div class="col-12 text-center">
                 <img src="../images/punchline_small.png" alt="logo-punchline">
             </div>
             <div class="col-12 description">
                 <p>
-                    {{'¿Estás preparado para mejorar tu freestyle? Entra y práctica todas las modalidades
-                    de juego hasta convertirte en uno de los mejores del mundo.'}}
+                    Introduce tu email para recuperar la contraseña.
                 </p>
             </div>
 
         </div>
 
-        <div class="col-sm-12 col-md-6 login-box-body">
+        <div class="col-sm-12 col-md-6 register-box-body">
             @yield('content')
         </div>
     </div>
