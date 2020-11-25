@@ -12,11 +12,11 @@
     justify-content: center;
 }
 
-.logo-box{
-    padding: 80px 50px 80px 50px;
+.logo-and-description-box{
+    padding: 23px 50px 80px 50px;
     color: white;
     background-color: #202020;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .login-box-body{

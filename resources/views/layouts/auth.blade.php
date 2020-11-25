@@ -26,11 +26,11 @@
 <body class="hold-transition login-page">
 <div class="container">
     <div class="row">
-        <div class="col-sm-12 col-md-6 logo-box">
+        <div class="col-sm-12 col-md-6 logo-and-description-box">
             <div class="col-12 text-center">
-                logo
+                <img src="../images/punchline_small.png" alt="logo-punchline">
             </div>
-            <div class="12">
+            <div class="col-12">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto commodi culpa, cumque deserunt
                     dolorum eligendi eos exercitationem
                     inventore ipsum libero maxime molestiae officiis quia quidem quos reiciendis vel vero.
