@@ -3,7 +3,20 @@
 @section('content')
 
     <div class="image-home">
-        logo
+        <div class="container">
+            <div class="row justify-content-center">
+                <div>
+                    <img src="../images/punchline_small.png" class="image-logo" alt="logo-punchline">
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, at commodi consectetur consequatur cum cupiditate ea eaque et fugiat harum minus neque perspiciatis quae quaerat repellat sunt tenetur totam ullam.</p>
+                </div>
+                <div>
+                    <button>pulsa aqui</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 
 
